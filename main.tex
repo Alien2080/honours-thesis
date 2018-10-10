@@ -44,8 +44,9 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{mathpazo} % Use the Palatino font by default
 \usepackage{todonotes}
 \usepackage{menukeys}
-%\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 
+% Uncomment the next two lines to use the biber command.
+%\usepackage[style=numeric]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 %\addbibresource{reference_library.bib} % The filename of the bibliography
 
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
@@ -277,6 +278,9 @@ Wonderful positive statements go here.
 %----------------------------------------------------------------------------------------
 \bibliographystyle{ieeetr}
 \bibliography{reference_library}
+
+% To have the biber command work uncomment the next line and comment out the other bibliography lines.
+%\printbibliography
 
 %----------------------------------------------------------------------------------------
 
