@@ -44,11 +44,11 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{mathpazo} % Use the Palatino font by default
 \usepackage{todonotes}
 \usepackage{menukeys}
-\usepackage{natbib}
+%\usepackage{natbib}
 
 % Uncomment the next two lines to use the biber command.
-%\usepackage[style=numeric]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
-%\addbibresource{reference_library.bib} % The filename of the bibliography
+\usepackage[style=numeric]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+\addbibresource{reference_library.bib} % The filename of the bibliography
 
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 
@@ -193,6 +193,8 @@ at Flinders University - Adelaide, Australia} \\[3cm]
   the pitfalls of past failures.  The learnings presented in this thesis are designed to be
   of use to any retro-computing project, and it is our hope that it will enable other
   projects to also have greater success, and less pain in the process. 
+  \citep{CNN_c64_recall}
+  
 
  
  
@@ -225,8 +227,7 @@ Wonderful positive statements go here.
 
 \textbf{CPU} & \textbf{C}omputer \textbf{P}rocessing \textbf{U}nit\\
 \textbf{PCB} & \textbf{P}rinted \textbf{C}ircuit \textbf{B}oard\\
-\textbf{SD} & \textbf{S}ecure \textbf{D}igital \\
-\textbf{SIM} & \textbf{S}ubscriber \textbf{I}dentity \textbf{M}odule\\
+\textbf{IC} & \textbf{I}ntegrated \textbf{C}ircuit\\
 
 \end{abbreviations}
 
@@ -272,11 +273,11 @@ Wonderful positive statements go here.
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
-\bibliographystyle{plainnat}
-\bibliography{reference_library}
+%\bibliographystyle{ieeetr}
+%\bibliography{reference_library}
 
 % To have the biber command work uncomment the next line and comment out the other bibliography lines.
-%\printbibliography
+\printbibliography
 
 %----------------------------------------------------------------------------------------
 
