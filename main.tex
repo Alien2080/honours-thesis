@@ -44,13 +44,13 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{mathpazo} % Use the Palatino font by default
 \usepackage{todonotes}
 \usepackage{menukeys}
-%\usepackage{natbib}
+%\usepackage{natbib} %use for plainnat (author date) bibtex style
 
 % Uncomment the next two lines to use the biber command.
-\usepackage[style=numeric]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
-\addbibresource{reference_library.bib} % The filename of the bibliography
+%\usepackage[style=numeric]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+%\addbibresource{reference_library.bib} % The filename of the bibliography
 
-\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+%\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
@@ -78,11 +78,11 @@ headsepline, % Uncomment to get a line under the header
 \addresses{} % Your address, this is not currently used anywhere in the template, print it elsewhere with \addressname
 
 \subject{Software Engineering} % Your subject area, this is not currently used anywhere in the template, print it elsewhere with \subjectname
-\keywords{} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
+\keywords{home computer, 8-bit, retro computer, MEGA65} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
 \university{\href{http://www.flinders.edu.au}{Flinders University}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
 \department{\href{https://www.flinders.edu.au/college-science-engineering}{College of Science and Engineering}} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
 \group{\href{http://researchgroup.university.com}{Research Group Name}} % Your research group's name and URL, this is used in the title page, print it elsewhere with \groupname
-\faculty{\href{http://www.flinders.edu.au/college-science-engineering}{Faculty of Science and Engineering}} % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
+\faculty{\href{http://www.flinders.edu.au/college-science-engineering}{}} % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
 
 \AtBeginDocument{
 \hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
@@ -126,7 +126,7 @@ headsepline, % Uncomment to get a line under the header
  
 \vfill
 
-\large \textit{Submitted to the \\\deptname \\ in the \\\facname \\
+\large \textit{Submitted to the \\\deptname \\ 
 in partial fulfilment of the requirements for the degree of \\\degreename\\ 
 at Flinders University - Adelaide, Australia} \\[3cm]
 %University requirement text
@@ -193,7 +193,7 @@ at Flinders University - Adelaide, Australia} \\[3cm]
   the pitfalls of past failures.  The learnings presented in this thesis are designed to be
   of use to any retro-computing project, and it is our hope that it will enable other
   projects to also have greater success, and less pain in the process. 
-  \citep{CNN_c64_recall}
+
   
 
  
@@ -277,7 +277,7 @@ Wonderful positive statements go here.
 %\bibliography{reference_library}
 
 % To have the biber command work uncomment the next line and comment out the other bibliography lines.
-\printbibliography
+%\printbibliography
 
 %----------------------------------------------------------------------------------------
 
