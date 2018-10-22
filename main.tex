@@ -1,3 +1,6 @@
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Masters/Doctoral Thesis 
 % LaTeX Template
@@ -44,13 +47,19 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{mathpazo} % Use the Palatino font by default
 \usepackage{todonotes}
 \usepackage{menukeys}
+\usepackage{csquotes}
 %\usepackage{natbib} %use for plainnat (author date) bibtex style
 
+
+%----------------------------------------------------------------------------------------
+%	ALT BIBTEX SETUP (remove other setup from end on document if used)
+%----------------------------------------------------------------------------------------
 % Uncomment the next two lines to use the biber command.
 %\usepackage[style=numeric]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 %\addbibresource{reference_library.bib} % The filename of the bibliography
-
 %\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+%----------------------------------------------------------------------------------------
+
 
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
@@ -93,8 +102,8 @@ headsepline, % Uncomment to get a line under the header
 \begin{document}
 
 \frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
-
 \pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -128,18 +137,19 @@ headsepline, % Uncomment to get a line under the header
 
 \large \textit{Submitted to the \\\deptname \\ 
 in partial fulfilment of the requirements for the degree of \\\degreename\\ 
-at Flinders University - Adelaide, Australia} \\[3cm]
-%University requirement text
+at Flinders University - Adelaide, Australia} \\[3cm] %University requirement text
 
+\includegraphics{pics/flin_logo} % University/department logo - uncomment to place it
  
 \vfill
 
 {\large \today}\\[4cm] % Date
-%\includegraphics{Logo} % University/department logo - uncomment to place it
+
  
 \vfill
 \end{center}
 \end{titlepage}
+
 
 %----------------------------------------------------------------------------------------
 %	DECLARATION PAGE
@@ -158,15 +168,17 @@ at Flinders University - Adelaide, Australia} \\[3cm]
 
 \cleardoublepage
 
+
 %%----------------------------------------------------------------------------------------
 %%	QUOTATION PAGE
 %%----------------------------------------------------------------------------------------
 %
-%\vspace*{0.2\textheight}
+\vspace*{0.2\textheight}
 %
-%\noindent\enquote{\itshape Thanks to my solid academic training, today I can write hundreds of words on virtually any topic without possessing a shred of information, which is how I got a good job in journalism.}\bigbreak
+\noindent \enquote{\itshape Everything should be made as simple as possible, but no simpler}\bigbreak
 %
-%\hfill Dave Barry
+\hfill - Common saying
+
 
 %----------------------------------------------------------------------------------------
 %	ABSTRACT PAGE
@@ -193,12 +205,8 @@ at Flinders University - Adelaide, Australia} \\[3cm]
   the pitfalls of past failures.  The learnings presented in this thesis are designed to be
   of use to any retro-computing project, and it is our hope that it will enable other
   projects to also have greater success, and less pain in the process. 
-
-  
-
- 
- 
 \end{abstract}
+
 
 %----------------------------------------------------------------------------------------
 %	ACKNOWLEDGEMENTS
@@ -206,8 +214,9 @@ at Flinders University - Adelaide, Australia} \\[3cm]
 
 \begin{acknowledgements}
 \addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
-Wonderful positive statements go here.
+I would like to thank my gorgeous wife, Jade, for her love and support. My Daughter, Eleanor, for going to kindy even when she didn't want to. Dr. Paul Gardner-Stephen for his guidance, encouragement and excellent life tips during my thesis project. And all the giants for allowing me to stand on their shoulders; the view is amazing.
 \end{acknowledgements}
+
 
 %----------------------------------------------------------------------------------------
 %	LIST OF CONTENTS/FIGURES/TABLES PAGES
@@ -225,17 +234,27 @@ Wonderful positive statements go here.
 
 \begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
 
-\textbf{CPU} & \textbf{C}omputer \textbf{P}rocessing \textbf{U}nit\\
-\textbf{PCB} & \textbf{P}rinted \textbf{C}ircuit \textbf{B}oard\\
-\textbf{IC} & \textbf{I}ntegrated \textbf{C}ircuit\\
+\textbf{CPU} & \textbf{C}omputer \textbf{P}rocessing \textbf{U}nit \\
+%\textbf{PCB} & \textbf{P}rinted \textbf{C}ircuit \textbf{B}oard\\
+\textbf{IC} & \textbf{I}ntegrated \textbf{C}ircuit sometime called a microchip \\
+\textbf{PC} & \textbf{P}ersonal \textbf{C}omputer or microcomputer or home computer \\
+\textbf{MOS} & \textbf{M}etal \textbf{O}xide \textbf{S}emiconductor \\
+\textbf{MITS} & \textbf{M}icro \textbf{I}nstrumentation and \textbf{T}elemetry \textbf{S}ystems \\
+\textbf{LAN} & \textbf{L}ocal \textbf{A}rea \textbf{N}etwork \\
+\textbf{BASIC} & \textbf{B}eginner's \textbf{A}ll-purpose \textbf{S}ymbolic \textbf{I}nstruction \textbf{C}ode \\
+\textbf{COBOL} & \textbf{CO}mmon \textbf{B}usiness \textbf{O}riented \textbf{L}anguage \\
+\textbf{CP/M} & \textbf{C}ontrol \textbf{P}rogram/\textbf{M}onitor \\
+\textbf{FPGA} & \textbf{F}ield-\textbf{P}rogrammable \textbf{G}ate \textbf{A}rray \\
+\textbf{MEGA} & \textbf{M}useum of \textbf{E}lectronic \textbf{G}ames and \textbf{A}rts \\
 
+\\
 \end{abbreviations}
 
 %----------------------------------------------------------------------------------------
 %	DEDICATION
 %----------------------------------------------------------------------------------------
 
-\dedicatory{For/Dedicated to/To my\ldots} 
+\dedicatory{Dedicated to my awesome family\ldots} 
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - CHAPTERS
