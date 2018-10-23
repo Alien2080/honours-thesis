@@ -121,14 +121,14 @@ In 1945, Rear Admiral Grace Murray Hopper fins a moth short-circuiting relays in
 
 In 1964, malicious persons are breaking the security on AT\& T's phone network in the USA. Using 'blue boxes' and later whistles, certain tone/s can be/where produced that would allow them to make long distance calls without paying. \\\\
 
-Now by the time the home computer era comes around, there is already a sizeable history of security. Encryption is know of and employed during this time (citation needed). \\\\
+Now by the time the home computer era comes around, there is already a sizeable history of security. Encryption is know of and employed during this time. Firstly both users needed a private encryption key but in 1976, the first publicly available paper on public encryption keys was published \cite{diffie}. \\\\
 
  1979 sees the first 'worm' created, originally a research project to make computers run faster, hacker modify it to delete data from computers.  1986 brings the first virus lose in the real world, the Brain virus was never intended to be malicious and had the creators details displayed when infected.
 
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
 \section{Malware}
-Malware or malicious software can placed into a few broadly defined forms:
+Malware or malicious software can placed into a non-exhaustive, few broadly defined forms:
 \begin{itemize}
 \item \textbf{Worm}: a stand-alone program self-replicating program.\\
 \item \textbf{Virus}: 'infects' other programs. Replicates by modifying code in other programs. Not a stand-alone program.
@@ -136,7 +136,9 @@ Malware or malicious software can placed into a few broadly defined forms:
 \end{itemize}
 
 \subsection{Computer viruses}
-John von Neumann first talked (published) about the idea of a self-replicating computer programs in 1966 \cite{neumann}. 1983 the term 'virus' is first used and defined by a doctorate student in their studies. 
+In the 1940's John von Neumann began to developed a theory of automata, part of this theory had to do with the idea of self-replicating artificial automata \cite{neumann} or computer programs. This description sounds a lot like the malware described above; the worm or virus. Neumann himself makes repeated comparisons between computer programs and biological life \cite{neumannA}, so its no coincidence that some malware has biologically inspired names. The term 'virus' itself didn't get coined until 1987, by  Fred Cohen in his paper Computer Viruses \cite{cohen}. Cohen discusses simple viruses and points out viruses are not by nature malicious, they can be used for productive means. He uses the example of a virus program that looks for uncompressed executable files on a computer, it then asks the users permission to compresses them, prepends some code into the executable (self-replicate) and moves to the next file. As this virus program asks for the users permission, it cannot be considered malicious. But the author suggests that language is fluid and the modern meaning of a computer virus is always malicious. 
+
+The Creeper worm is considered the first virus.
 
 1990 self-modifying virus
 
@@ -147,3 +149,5 @@ John von Neumann first talked (published) about the idea of a self-replicating c
 
 
 \subsection{Complexity as the root cause of modern malware susceptibility}
+Fred Cohen talks about inability to protect against viruses in large systems.
+Neumann talks about complexity, proves its an N-NP complete problem (I think it was him, have to read again).
