@@ -1,4 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%8-bit Innovation: The challenges facing community based and open-source retro-computing projects
+%Software Engineering Masters Thesis
+%Tom Aylen 
+%Semester 2, 2018 - Semester 1, 2019
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Masters/Doctoral Thesis 
 % LaTeX Template
 % Version 2.5 (27/8/17)
@@ -45,18 +50,6 @@ headsepline, % Uncomment to get a line under the header
 \usepackage{todonotes}
 \usepackage{menukeys}
 \usepackage{csquotes}
-%\usepackage{natbib} %use for plainnat (author date) bibtex style
-
-
-%----------------------------------------------------------------------------------------
-%	ALT BIBTEX SETUP (remove other setup from end on document if used)
-%----------------------------------------------------------------------------------------
-% Uncomment the next two lines to use the biber command.
-%\usepackage[style=numeric]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
-%\addbibresource{reference_library.bib} % The filename of the bibliography
-%\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
-%----------------------------------------------------------------------------------------
-
 
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
@@ -78,13 +71,14 @@ headsepline, % Uncomment to get a line under the header
 
 \thesistitle{8-bit Innovation: The challenges facing community based and open-source retro-computing projects} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
 \supervisor{Dr. Paul \textsc{Gardner-Stephen}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
+\newcommand{\sname}{Dr. Paul Gardner-Stephen}
 \examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
 \degree{Bachelor of Engineering (Software) (Honours)} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
 \author{Tom \textsc{Aylen}} % Your name, this is used in the title page and abstract, print it elsewhere with \authorname
 \addresses{} % Your address, this is not currently used anywhere in the template, print it elsewhere with \addressname
 
 \subject{Software Engineering} % Your subject area, this is not currently used anywhere in the template, print it elsewhere with \subjectname
-\keywords{home computer, 8-bit, retro computer, MEGA65} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
+\keywords{home computer, 8-bit, retro computer, MEGA65, FPGA} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
 \university{\href{http://www.flinders.edu.au}{Flinders University}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
 \department{\href{https://www.flinders.edu.au/college-science-engineering}{College of Science and Engineering}} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
 \group{\href{http://researchgroup.university.com}{Research Group Name}} % Your research group's name and URL, this is used in the title page, print it elsewhere with \groupname
@@ -230,21 +224,21 @@ I would like to thank my gorgeous wife, Jade, for her love and support. My Daugh
 
 \begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
 
-\textbf{CPU} & \textbf{C}omputer \textbf{P}rocessing \textbf{U}nit \\
-%\textbf{PCB} & \textbf{P}rinted \textbf{C}ircuit \textbf{B}oard\\
-\textbf{IC} & \textbf{I}ntegrated \textbf{C}ircuit sometime called a microchip \\
-\textbf{PC} & \textbf{P}ersonal \textbf{C}omputer or microcomputer or home computer \\
-\textbf{MOS} & \textbf{M}etal \textbf{O}xide \textbf{S}emiconductor \\
-\textbf{MITS} & \textbf{M}icro \textbf{I}nstrumentation and \textbf{T}elemetry \textbf{S}ystems \\
-\textbf{LAN} & \textbf{L}ocal \textbf{A}rea \textbf{N}etwork \\
 \textbf{BASIC} & \textbf{B}eginner's \textbf{A}ll-purpose \textbf{S}ymbolic \textbf{I}nstruction \textbf{C}ode \\
 \textbf{COBOL} & \textbf{CO}mmon \textbf{B}usiness \textbf{O}riented \textbf{L}anguage \\
+\textbf{CPU} & \textbf{C}omputer \textbf{P}rocessing \textbf{U}nit \\
 \textbf{CP/M} & \textbf{C}ontrol \textbf{P}rogram/\textbf{M}onitor \\
 \textbf{FPGA} & \textbf{F}ield-\textbf{P}rogrammable \textbf{G}ate \textbf{A}rray \\
+\textbf{IC} & \textbf{I}ntegrated \textbf{C}ircuit \\
+\textbf{IEEE}	& \textbf{I}nstitute of \textbf{E}lectrical and \textbf{E}lectronics \textbf{E}ngineers\\
+\textbf{LAN} & \textbf{L}ocal \textbf{A}rea \textbf{N}etwork \\ 
 \textbf{MEGA} & \textbf{M}useum of \textbf{E}lectronic \textbf{G}ames and \textbf{A}rts \\
+\textbf{MITS} & \textbf{M}icro \textbf{I}nstrumentation and \textbf{T}elemetry \textbf{S}ystems \\
+\textbf{MOS} & \textbf{M}etal \textbf{O}xide \textbf{S}emiconductor \\
+\textbf{PC} & \textbf{P}ersonal \textbf{C}omputer \\
+%\textbf{PCB} & \textbf{P}rinted \textbf{C}ircuit \textbf{B}oard\\
 \textbf{VHDL} & \textbf{V}HSIC \textbf{H}ardware \textbf{D}escription \textbf{L}anguage \\
 \textbf{VHSIC} & \textbf{V}ery \textbf{H}igh \textbf{S}peed \textbf{I}ntegrated \textbf{C}ircuit \\
-
 \\
 \end{abbreviations}
 
@@ -287,11 +281,18 @@ I would like to thank my gorgeous wife, Jade, for her love and support. My Daugh
 %\include{Appendices/AppendixB}
 %\include{Appendices/AppendixC}
 
+%code to try and insert bib into ToC
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+	
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
 \bibliographystyle{ieeetr}
 \bibliography{reference_library}
+
+
 
 % To have the biber command work uncomment the next line and comment out the other bibliography lines.
 %\printbibliography
