@@ -4,6 +4,35 @@
 \chapter{Bringing open-source 8-bit projects to the market: process}
 \label{Chapter4}
 
+This chapter identifies, lists and discusses the processes other similar projects took to making and releasing their respective products to the market.
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
-\section{Case Studies}
+\section{Open-source case studies}
+The Arduino and Raspberry Pi where both studied because of their open-source nature, success and because both are relatively simple computers (in the general sense). These project share enough characteristics with the MEGA65 that some useful information was obtainable from these studies.
+
+\subsection{Arduino}
+Arduino started with an idea, to create a cheap microcontroller for students. From the idea stage, then a prototype was built, Wiring, by a student of the founders for a thesis project. This prototype was not only the physical electronic board but also a complete development suite with it own IDE (Which itself was derived from another project, Processing). From this prototype, work was done to add support for a cheaper chip and other refinements where undertaken, with the intention of keeping the cost as low as possible, before the design (of the first Arduino board) was complete. Massimo partnered with another teacher at the school whom had similar idea but was trying a different technology, they discussed and decided to use Massimo's prototype as it had better compatibility with different OS'. Partner spend two days checking hardware design and fixing some bugs, from there is was only the software to complete (and get board manufactured). The Arduino team then had to get them physically built, to do this they partnered with someone involved with electronic manufacturing in Italy. They then raised funds to produce a limit amount (100? in video i think) and sold half of the to the school where they where originally intended, the other half where not known if anyone would want to buy them at time of production. Interest did grow though and the remaining boards did sell and Arduino popularity has increased a lot since then. 
+
+As the Arduino is a single-board device with no case or human interface device (HID), the  hardware process from working prototype to finished design was relatively simple, it was just the electronic board design and parts selection with regard to price, quality and availability and then manufacturing. There was also software actively being worked on during this time as well.
+
+The fact that Arduino creators didn't know if half of the first production run would sell and if it did, whom would be interested in it, leads to the idea that they didn't do a lot of market research before hand.
+
+The open-source nature of the software, before retail launch, meant that several people contributed to the finished software that was present on launch day.
+
+\subsection{Raspberry Pi}
+Eben Upton first started with a desire to help children engage with computers and computer topics. He decided the best way to do this was to give them access to a cheap computer that they could "mess around" with and learn along the way, much as he did with a BBC Micro when he was young. 
+
+Upton built several prototypes while trying to achieve his goal. The first was built using a microcontroller as the core, which was configured to act as a computer and gave about the same computational power as a BBC Micro. He continued with other prototypes, quickly moving to a microprocessor as the core with later designs but he found they where all too expensive to meet his goal. It wasn't until Upton found a suitable chip that was both powerful (about to deliver a graphic display and run Linux so as to give users a more widely accustomed GUI interface to use) and cheaper, in part to Upton working for the manufactures of the chip, Broadcom, and able to get the to agree to a good price. With this new chip secured, Upton went about building another prototype with it at the core. This prototype was was Upton took to the BBC asking for funding to build a successor to the BBC Micro. BBC disagreed because they where not in the business of making computers any more but suggested Upton show his prototype to a reporter. The reporter shot a short video showing the prototype and this video quickly went viral and demand for the Raspberry Pi was confirmed. From this stage Upton formed the Raspberry Pi foundation and partnered with several others. The prototype design was refined, with Upton and co. trying to keep the board within \$35. During this process several features where cut to save costs, Upton also embarked on a campaign to secure parts at a cheap as a possible price (in video). A version of the Linux OS, designed specifically for the Raspberry Pi, was also in development.
+
+I am not sure how they raised funds for first production run?
+
+Raspberry Pi foundation did partner with a large partner to secure worldwide distribution and manufacturing channels, something the Upton is very proud of as he says it let the Raspberry Pi grow a lot faster.
+
+\section{Process}
+1. prototype, working. Hardware and software
+2. Control IP.
+3. Research / seek advice on relevant laws, regulations, standards etc that need to be complied with in all jurisdictions where product will be sold, it may be wise to focus on a small geographic location first to minimise this set.
+4. refine prototype design, MVP, market research can inform choices of which features to cut or add.
+5. finished design with all features implemented, hardware and software
+6. raise funds for first production run. Partnership or crowd funding or both.
+7. organise manufactures to produce product
