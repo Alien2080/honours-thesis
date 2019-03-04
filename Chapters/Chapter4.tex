@@ -4,29 +4,79 @@
 \chapter{Bringing open-source 8-bit projects to the market: process}
 \label{Chapter4}
 
-This chapter identifies, lists and discusses the processes other similar projects took to making and releasing their respective products to the market.
+This chapter identifies, lists and discusses the processes other similar projects went through while transforming their product from a prototype to a retail product. An ad hoc process is developed from case studies of the Raspberry Pi, Arduino, Spectrum Next, Spectrum Vega, Spectrum Vega+, C64 DTV and C64 mini. This ad hoc process is then discussed regarding its strengths and weaknesses. The more formal and well established methodology for developing a product, the Lean Startup method 
+\cite{136}, is also used to contrast and compare.
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
 \section{Open-source case studies}
 The Arduino and Raspberry Pi where both studied because of their open-source nature, success and because both are relatively simple computers (in the general sense). These project share enough characteristics with the MEGA65 that some useful information was obtainable from these studies.
 
 \subsection{Arduino}
-Arduino started with an idea, to create a cheap microcontroller for students. From the idea stage, then a prototype was built, Wiring, by a student of the founders for a thesis project. This prototype was not only the physical electronic board but also a complete development suite with it own IDE (Which itself was derived from another project, Processing). From this prototype, work was done to add support for a cheaper chip and other refinements where undertaken, with the intention of keeping the cost as low as possible, before the design (of the first Arduino board) was complete. Massimo partnered with another teacher at the school whom had similar idea but was trying a different technology, they discussed and decided to use Massimo's prototype as it had better compatibility with different OS'. Partner spend two days checking hardware design and fixing some bugs, from there is was only the software to complete (and get board manufactured). The Arduino team then had to get them physically built, to do this they partnered with someone involved with electronic manufacturing in Italy. They then raised funds to produce a limit amount (100? in video i think) and sold half of the to the school where they where originally intended, the other half where not known if anyone would want to buy them at time of production. Interest did grow though and the remaining boards did sell and Arduino popularity has increased a lot since then. 
+Arduino started with an idea, to create a cheap microcontroller for students and an accompanying platform to make it easy to use. From the idea stage, then a prototype was built. The prototype in this case is taken to be the microcontroller board and accompanying software Massimo Banzi and David Cuartielles developed in 2005 \cite{RN111}. This prototype had a somewhat convoluted history, being derived from Wiring, another similar project created by a student for their thesis project \cite{RN110}\cite{RN111}. It's worth noting that the software or Integrated Development Environment (IDE) was (and still is) open-source and several others helped in its development, up to and after the prototype stage. Banzi and Cuartielles invited others to help with the project, an advisor Tom Igoe, a student David Mellis to help write the software and Gianluca Martino who could help facilitate the production of the board 
+\cite{RN111}. After discussions with Igoe, the Arduino team decided at some point in 2005, that the target market for their product was much larger than just the students in there respectively schools. The prototype then went into a period of refinement, with the main goals of making it cheap to produce and simple to use. This included fixing some bugs in the hardware design 
+\cite{RN111} and more extensive work on the IDE to included more user-friendly features and allow support for a cheaper chip.
+
+The Arduino team then decided to produce a larger batch of 200 units with a prearranged agreement with two schools to buy 50 units each. The agreement meant to production run would atleast make back half of its cost, even if the other 100 boards where not sold. This reduced the risk to investors (which where Arduino team members in this case). This small production run was meant as a test to see if there was market interest in the product outside of the schools. The team then placed some paid advertisements marketing the Arduino board, as well as discussing the product with friends and colleges to spread word of mouth \cite{RN111}. The Arduino boards started to sell, slowly at first but it was obvious at this point that there was a market for the Arduino board.
 
 As the Arduino is a single-board device with no case or human interface device (HID), the  hardware process from working prototype to finished design was relatively simple, it was just the electronic board design and parts selection with regard to price, quality and availability and then manufacturing. There was also software actively being worked on during this time as well.
 
-The fact that Arduino creators didn't know if half of the first production run would sell and if it did, whom would be interested in it, leads to the idea that they didn't do a lot of market research before hand.
+The fact that Arduino creators didn't know if half of the first production run would sell and if it did, whom would be interested in it, leads to the idea that they didn't do a lot of market research before hand. The team thought of the first production run as a test to gauge market interest.
 
-The open-source nature of the software, before retail launch, meant that several people contributed to the finished software that was present on launch day.
+\textbf{Steps Identified}
+1. construct working prototype.
+2. decide final product features and specifications based on prototype feedback.
+3. refine prototype to remove bugs/errors and add any features that are required for product launch
+4. add team members as needed to help grow the project. Focus on what skills they can provide when deciding on members.
+5. self fund a small production run of the final product.
+6. place advertisements and use word of mouth to spread awareness of the product.
+7. Partner with or form agreements with distributors to increase the availability of the product.
+  
+  
+\begin{enumerate}
+\item Construct a working prototype to fulfil an idea or need.
+\item Decide final product features and specifications based on prototype feedback.
+\item Refine prototype to remove bugs/errors and add any features that are required for the product launch.
+\item Add team members as needed to help grow the project. Focus on what skills they can provide when deciding on members.
+\item Self fund a small production run of the final product.
+\item Place advertisements and use word of mouth to spread awareness of the product.
+\item Partner with or form agreements with distributors to increase the availability of the product.
+\end{enumerate} 
+
 
 \subsection{Raspberry Pi}
-Eben Upton first started with a desire to help children engage with computers and computer topics. He decided the best way to do this was to give them access to a cheap computer that they could "mess around" with and learn along the way, much as he did with a BBC Micro when he was young. 
+The Raspberry Pi first started with a desire to help children engage with computers and computer topics. Eben Upton, one of the founders of the Raspberry Pi Foundation, decided the best way to achieve this was to give them access to a cheap computer that they could "mess around" with and learn along the way, much as he did with a BBC Micro when he was young 
+\cite{RN98}. Upton built several prototypes while trying to achieve this goal. The first was built in 2006 using a microcontroller as the core and gave about the same computational power as a BBC Micro 
+\cite{RN137}. Upton originally thought a highly-integrated remake of the BBC Micro would meet his goal but after discussion with like minded people, Upton abandoned this in favour of a more powerful machine 
+\cite{RN98}. Upton team-up with other like minded individuals in 2009 and formed the Raspberry Pi Foundation with the stated goal to "put the power of computing and digital making into the hands of people all over the world." 
+\cite{RN138}. Upton and the rest of the foundation now faced the problem that all the microprocessor available at the time where too expensive to include in a computer which needed to be cheap. It wasn't until a couple of years later that Upton found a suitable chip, the Broadcom BCM2835, a System-on-Chip (SoC), which is a complete microcomputer within a chip. In 2011, the Raspberry Pi Foundation had made a new prototype, with the BCM2835 at its core. This new prototype was shown publicly in May 2011 and received a huge amount of attention. In this somewhat unplanned showing the Raspberry Pi team said they would have it finished by May 2012 and it would cost \pounds 15.   
 
-Upton built several prototypes while trying to achieve his goal. The first was built using a microcontroller as the core, which was configured to act as a computer and gave about the same computational power as a BBC Micro. He continued with other prototypes, quickly moving to a microprocessor as the core with later designs but he found they where all too expensive to meet his goal. It wasn't until Upton found a suitable chip that was both powerful (about to deliver a graphic display and run Linux so as to give users a more widely accustomed GUI interface to use) and cheaper, in part to Upton working for the manufactures of the chip, Broadcom, and able to get the to agree to a good price. With this new chip secured, Upton went about building another prototype with it at the core. This prototype was was Upton took to the BBC asking for funding to build a successor to the BBC Micro. BBC disagreed because they where not in the business of making computers any more but suggested Upton show his prototype to a reporter. The reporter shot a short video showing the prototype and this video quickly went viral and demand for the Raspberry Pi was confirmed. From this stage Upton formed the Raspberry Pi foundation and partnered with several others. The prototype design was refined, with Upton and co. trying to keep the board within \$35. During this process several features where cut to save costs, Upton also embarked on a campaign to secure parts at a cheap as a possible price (in video). A version of the Linux OS, designed specifically for the Raspberry Pi, was also in development.
+The prototype design was refined, with Upton and co. trying to keep the board within \$35. During this process several features where cut to save costs, Upton also embarked on a campaign to secure parts at a cheap as a possible price (in video). A version of the Linux OS, designed specifically for the Raspberry Pi, was also in development.
+
+They originally planned to make 1000 unit in the first production run
+ \cite{RN139}
 
 I am not sure how they raised funds for first production run?
 
 Raspberry Pi foundation did partner with a large partner to secure worldwide distribution and manufacturing channels, something the Upton is very proud of as he says it let the Raspberry Pi grow a lot faster.
+
+
+\section{Retro revival project case studies}
+These case studies look at a group of products that are inspired by 8-bit computers from the home computer era mentioned in \ref{sec: Early home computer era}. Two of the biggest names from that time, Spectrum, popular in Britain and Commodore, popular in the USA are both reproduced in modern revival projects. These projects are similar to the MEGA65 project and as such are studied in the hope of increasing the chance of the MEGA65 being successful. 
+
+\subsection{Sinclair ZX Spectrum Vega}
+
+
+\subsection{Spectrum Vega+}
+
+
+\subsection{ZX Spectrum Next}
+
+
+\subsection{C64 Mini}
+
+
+\subsection{C64 DTV}
+
 
 \section{Process}
 1. prototype, working. Hardware and software
