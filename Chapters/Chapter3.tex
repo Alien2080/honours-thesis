@@ -3,7 +3,7 @@
 
 \chapter{Bringing open-source 8-bit projects to the market: Case studies of similar projects and the challenges they faced}
 \label{Chapter3}
-By considering other similar projects and and highlighting the challenges they faced it is hoped that the MEGA65 project can avoid unnecessary delays and costs in the productisation process. This chapter outlines challenges that where faced by the teams behind the Spectrum Vega, Spectrum Vega+, Spectrum Next, Raspberry Pi, Arduino, C64DTV and C64Mini. These challenges where uncovered during case studies into these projects. This chapter also strives to highlight methods and activities used by the projects studied, that will help ensure the success of the MEGA65 project. 
+By considering other similar projects and and highlighting the challenges they faced it is hoped that the MEGA65 project can avoid unnecessary delays and costs in the productisation process. This chapter outlines challenges that where faced by the teams behind the Spectrum Vega, Spectrum Vega+, Spectrum Next, Raspberry Pi, Arduino, C64DTV and C64Mini. These challenges where uncovered during case studies into these projects. This chapter also strives to highlight methods and activities used by the projects studied that will help ensure the success of the MEGA65 project. 
 
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
@@ -13,15 +13,15 @@ The Arduino and Raspberry Pi where both studied because of their open-source nat
 \subsection{Arduino}
 
 \textbf{What is it?}\\
-Arduino is a company which designs, produces and sells the Arduino range of single-board microcontrollers as seen in figure \ref{ArduinoUno3}, which are mostly 8-bit machines with 32-bit machines being introduced later. The Arduino company has released all the hardware designs as open-source under a Creative Commons licence. The associated IDE (Integrated Development environment) software is also open-source and Arduino also encourage and facilitate a community of hobbyist, open-source enthusiasts and professionals 
-\cite{133}. \\
+Arduino is a company which designs, produces and sells the Arduino range of single-board microcontrollers as seen in figure \ref{ArduinoUno3}. These are mostly 8-bit machines with 32-bit machines being introduced later and are known for being inexpensive to purchase. The Arduino company has released all the hardware designs as open-source under a Creative Commons licence. The associated IDE (Integrated Development environment) software is also open-source and Arduino also encourage and facilitate a community of hobbyist, open-source enthusiasts and professionals 
+\cite{RN133}. \\
 
 \textbf{When was it produced?}\\
 The first Arduino board was designed and made available to students at the Interaction Design Institute Ivrea (IDII) in Italy in 2005. As word spread, the board quickly became popular outside of the class and Arduino boards remains hugely popular today 
 \cite{RN103}.\\
 
 \textbf{Why was it produced?}\\
-It was used to help teach the students at IDII, interactive design (also known as physical computing). Massimo Banzi, a co-founder of Arduino, was using another commercially available microcontroller (the BASIC Stamp) to teach the class prior to the Arduino board being created (and its inspiration, Wiring) but it didn't meet his needs for teaching and it was too expensive for the students. Banzi decided to design his own microcontroller as associated IDE. Banzi drew heavy inspiration from another very similar project, Wiring, that was also in development at IDII before and during the creation of the first Arduino board. Wiring in turn built on another related project, Processing, which provided the starting point for the IDE used in Wiring. \\
+It was used to help teach the students at IDII, interactive design (also known as physical computing). A co-founder of Arduino, Massimo Banzi was using another commercially available microcontroller called the BASIC Stamp to teach his class prior to the Arduino board or its inspiration, Wiring being created \cite{RN103}. Banzi found the Stamp didn't meet his needs for teaching and it was too expensive for the students. Banzi decided to design his own microcontroller and associated IDE to create an entire platform for users to easily achieve their goals. Banzi drew heavy inspiration from another very similar project called Wiring that was also in development at IDII before and during the creation of the first Arduino board. Wiring in turn built on another related project, Processing, which provided the starting point for the IDE used in Wiring \cite{RN110}\cite{RN135} \cite{RN111}. \\
 
 
 \begin{figure} \begin{center}
@@ -72,12 +72,17 @@ In 2006, Eben Upton, who grew up using a BBC Micro (from the early home computer
 
 \textbf{Challenges faced during productisation}\\
 The Raspberry Pi productisation process seems to have avoided most major problems, how much of this can be attributed to Upton waiting for a chip that suited the project is hard to decipher, but it most definitely helped. Whether waiting for a suitable chip is a challenge or not depends on the project.
-The Raspberry team announced a release date before the final product was ready, this added a lot of pressure during that window to meet their self imposed deadline, this added stress to the creators but may have helped push the project along at a faster pace than without the deadline \cite{RN97}. 
-The Raspberry Pi was delayed in the first production run due to compliance laws in Europe around electronic interference compliance. The Raspberry Pi needed to be tested for electronic interference but the creators didn't realise this until it was too late to avoid delays \cite{RN98}.  
+The Raspberry team announced a release date before the final product was ready, this added a lot of pressure during that window to meet their self imposed deadline but may have helped push the project along at a faster pace 
+\cite{RN97}. 
+The Raspberry Pi was delayed in the first production run due to compliance laws in Europe around electronic interference compliance. The Raspberry Pi needed to be tested for electronic interference but the creators didn't realise this until it was too late to avoid delays 
+\cite{RN98}. The Foundation wanted to keep the cost of a board to \$35 as they believed it would be critical to achieving their goal that as many people as possible could afford one. To keep the cost down, Upton had to cut several features during the development phase 
+\cite{RN98}. Upton also embarked upon an aggressive campaign to secure parts at low cost 
+\cite{RN98}.
 
 \textbf{Relevant useful lessons gleamed from the study}\\
 Open source hardware can be incredibly popular. 
-Check relevant laws and seek expert advice early as possible to avoid delays in production.\\
+Check relevant laws and seek expert advice early as possible to avoid delays in production.
+Keeping the cost down can greatly increase market size and device uptake. \\
 
 \section{Retro revival project case studies}
 These case studies look at a group of products that are inspired by 8-bit computers from the home computer era mentioned in \ref{sec: Early home computer era}. Two of the biggest names from that time, Spectrum, popular in Britain and Commodore, popular in the USA are both reproduced in modern revival projects. These projects are similar to the MEGA65 project and as such are studied in the hope of increasing the chance of the MEGA65 being successful. 
@@ -114,7 +119,8 @@ Crowd-funding campaigns can be useful to raise capital but offering a as-yet unf
 
 Sinclair ZX Spectrum Vega mention earlier. It is, like it predecessor, inspired by the Sinclair ZX Spectrum and also has the endorsement of Sir Clive Sinclair, although it is reported he has very little to do with the actual running of Sinclair Research 
 \cite{RN123}. The Vega Plus is a hand-held console with its own screen and internal battery as well as the ability to output its display to a TV, although this feature couldn't be made to work in a review of the Vega Plus 
-\cite{RN117}.
+\cite{RN117}. The Vega+ has a microcontroller controller at its core which provides the computational power 
+\cite{RN143}.
 
 \textbf{When was it produced?}\\
 In July 2018, Retro Computers sent out a number of Vega Plus consoles to backers. No other Vega Plus consoles have been produced.
@@ -163,16 +169,21 @@ A commercial enterprise.
 \end{figure} 
 
 \textbf{Challenges faced during productisation}\\
-The makers have had trouble with the mechanical function of the keyboard which has delayed production while they try to fix the issue. The last given expected delivery date was the 2nd quarter of 2019. There is also evidence the firmware the Next is running is still under development.
+The makers have had trouble with the mechanical function of the keyboard which has delayed production while they try to fix the issue. The last given expected delivery date was the 2nd quarter of 2019. There is also evidence the firmware the Next is running is still under development. The Next team also mentions problems with the exchange rate, as the value of the pound had been falling compared to the US dollar during the production period, this made it hard for them to source all the components within their budget 
+\cite{RN159}. The Spectrum Next team also had to consider the effects of Brexit 
+\cite{RN157}. The chosen manufacturer of the case unexpectedly the project unexpectedly due to the manager resigning and the new manager not considering the project worthwhile for their business 
+\cite{RN158}. This caused some delay as the team had to find a new case manufacturer, the Next team was also worried about incurring storage costs because of this. If the keyboards where finished before the case then they would have to go into storage, costing the Next team extra money. It turned out that due to delays with the keyboard, this wasn't an issue. Another issues faced was due to a stretch goal (a stretch goal is an additional goal for the crowd-funding campaign that was above the first goal of funding the production), the inclusion of RAM sockets that would allow new RAM to be added without the need to solder, caused some problems as the devices are not in common usage any more and thus hard to buy or get manufactured. They did eventually find a manufacturer which still had the parts to make the sockets and that also agreed to make a small run for the Next 
+\cite{RN159}. 
 
 \textbf{Relevant useful lessons gleamed from the study}\\
 As the project is not finished yet it is hard to gleam anything useful. Give plenty of time (if possible) to quality control and testing of the buttons and keys.
 
 \subsection{C64 Mini}
 \textbf{What is it?}\\
-A mini form-factor game console inspired by the Commodore 64. It also is a fully functional Commodore 64 which can be control via a USB connected keyboard (not included). It has a non-functional keyboard and a functional joystick which connects to the console. The  console then connects to a TV to display in 720p resolution. It came pre-loaded with 64 game written for the Commodore 64, it also has the ability to load game ROMs from a USB flash stick. It was funded through a crowd-funding campaign on Indiegogo 
-\cite{RN124} with the intention of making a full size version after the mini version. It's interesting to note that the resigned directors of Retro Computers (they company behind the unpopular Vega Plus campaign), Paul Andrews and Chris Smith (they resigned before the company went off the rails) are involved as well as Darren Melbourne who worked on the C64 DTV 
-\cite{RN127}.
+A mini form-factor game console inspired by the Commodore 64. It also is a fully functional Commodore 64-like computer which can be control via a USB connected keyboard (not included). It has a non-functional keyboard and a functional joystick which connects to the console via a cable. The console connects to a TV to display in 720p resolution. The C64 Mini came pre-loaded with 64 game written for the Commodore 64, it also has the ability to load game ROMs from a USB flash stick. It was funded through a crowd-funding campaign on Indiegogo 
+\cite{RN124}, the campaign was intended to raise funds to pay design work on the case and keyboard as well as pay for the first production run. The creators of the Mini are Retro Games, they originally planned on releasing a full-size and hand-held console (with build-in screen) form factor but during the production period, on the 28th of April 2017, they pivoted to focus on the C64 Mini form-factor with the full-size version to follow later \cite{RN160}. It's interesting to note that the resigned directors of Retro Computers (the company behind the unpopular Vega Plus campaign), Paul Andrews and Chris Smith (they resigned before the company went off the rails) are involved, as well as Darren Melbourne who worked on the C64 DTV 
+\cite{RN127}. The Mini has a ARM SoC at its core, which runs a software emulation of the C64 
+\cite{RN160}. Retro game have stated that they will open-source the designs as much as possible once the production is complete, currentley they have not even though the C64 Mini has been released but the full-size version is still under production
 
 \textbf{When was it produced?}\\
 Released in the first quarter of 2018.
@@ -197,8 +208,9 @@ Regular communication with backers is important for a successful crowd-funding c
 
 \subsection{C64 DTV}
 \textbf{What is it?}\\
-A single-chip Commodore 64 clone housed within a joystick, comes preloaded with 30 games. It was, unsurprisingly from the name, inspired by the Commodore 64. It features a FPGA at its core and has the possibility of after market modification due to exposed solder points on the board
-\cite{RN126}. 
+A single-chip Commodore 64 clone housed within a joystick, comes preloaded with 30 games. It was, unsurprisingly from the name, inspired by the Commodore 64. It features an ASIC (Application-specific Integrated Circuit) at its core 
+\cite{RN129} and has the possibility of after market modification due to exposed solder points on the board
+\cite{RN126}. The C64 DTV was born from another project, the C-One which was also created by the DTV's designer, Jeri Ellsworth. The C-One is a single-board C64 clone made using FPGA technology.
 
 \textbf{When was it produced?}\\
 First released in 2014 with version 1, which support only NTSC Broadcasting Television standard. Version 2 came out in 2015 with additional PAL support
@@ -214,9 +226,11 @@ A commercial endeavour.
 \end{figure}
 
 \textbf{Challenges faced during productisation}\\
-The C64 DTV was derived from another similar product, the C-One. Jeri Ellsworth designed an enhanced version of the Commodore 64 as a way to teach herself about programming FPGAs. Ellsworth then partnered with Individual Computers to turn her FPGA design into a product, the C-One. Other manufactures and retailers saw potential in the C-One and asked if Elleworth would consider making a smaller version that would fit in a joystick and be designed to enable users to play Commodore 64 games easily. Unfortunately it seems very little was published about the process from turning the C-One into the C64 DTV or from earlier efforts to complete the C-One.
+The C64 DTV was derived from another similar product, the C-One. Jeri Ellsworth designed an enhanced version of the Commodore 64 as a way to teach herself about programming FPGAs. Ellsworth then partnered with Individual Computers to turn her FPGA design into a product, the C-One. Other manufactures and retailers saw potential in the C-One and asked Elleworth if she would consider making a smaller version that would fit in a joystick, with a focus on enabling users to play games, shown in figure \ref{C64_DTV}. Unfortunately it seems very little was published about the process from turning the C-One into the C64 DTV or from earlier efforts to complete the C-One.
 
 
 \textbf{Relevant useful lessons gleamed from the study}\\
 Retro games can sell quite well, nostalgia is a powerful incentive.
-Extra features included in the device can help boost sales, these can be features that are not normal available but the device can be hacked or modified by the user to make them available.
+Extra features included in the device can help boost sales, these can be features that are not normally available but the device can be hacked or modified by the user to make them available. There are reports of user buying the DTV simply to access the C64-like computer running at its core.
+ASICs are a technology that could be applied to this area.
+There is a larger market for consoles that focus on playing games than other uses of a 8-bit computer.
