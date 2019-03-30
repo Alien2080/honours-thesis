@@ -151,9 +151,24 @@ The MEGAphone electronics hardware is currently in an alpha stage, the PCB is in
 \section{MEGA65 Desktop Computer Form Factor}
 This section looks at the current state of the MEGA65 Desktop form-factor. The Desktop form-factor's physical development is being overseen by M.E.G.A. in Germany. The physical development refers to the electronics hardware, case and keyboard. It still uses the same FPGA-based core, developed by Dr Gardner-Stephens, as the MEGAphone. Following a discussion the Detlef in Germany, who is overseeing the development of the MEGA65 Desktop, the following state of the MEGA65 Desktop hardware was elicited. 
 
-The MEGA65 Desktop is currently in a "pre-series" stage, the machines are roughly 95\% complete and being created in their current state so they can be tested in a real-life environment. 
+The MEGA65 Desktop is currently in a "pre-series" stage, the machines are roughly 95\% complete and have been created in their current state so they can be tested in a real-life environment. 
 
 \subsection{Hardware}
 
 
 \subsection{Case}
+The current case has had a few modifications from the original design, which was based on the Commodore 65 case. It has a new appearance with a original case design which has been described as "cleaner". The new case also has some major changes around the port at the back of the computer and some minor changes to the trapdoor on the bottom as well as some additions for ventilation. These design changes to the new case where carried out by Hintsteiner in Austria.
+
+The MEGA65 Desktop is planned for a pre-production run of 20 machines using the new case design. This run will use vacuum moulds for the cases to reduce costs but the vacuum mould process has some drawbacks: 
+\begin{enumerate}
+\item The mould will only only be bale to create 20 cases before it has to be replaced.
+\item The colour of the plastic forming the case slightly changes between cases.
+\item Some parts of the case need to be manually fixed after the vacuum mould adding costs and the need to paint sections of the case.
+\end{enumerate}
+
+*PIC OF NEW CASE TO COME FROM DETLEF*
+
+\subsection{Keyboard}
+The keyboard for the MEGA65 Desktop is being produced by GMK, a German company. It features Cherry MX mechanical switches and 2 embedded metal plates, intended to provide very high stability. There are 2 LEDs for the lock keys, capslock and numlock and 4 RGB LEDs for power and floppy activity indicators, these are all powered by a custom-made communication bus. The keyboard also has a CPLD-based controller in place of the more widely used ARM7 microcontroller, this was done intentional to avoid "having more intelligence inside the keyboard than inside the computer".
+
+Detlef has ordered 25 of these keyboards for the pre-production run, this was intentional more than the 20 cases being produced as mentioned above. It will provide for 5 case-less machines 
