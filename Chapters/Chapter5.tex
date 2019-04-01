@@ -6,6 +6,19 @@
 This chapter discusses the current state of the MEGA65 project in both its form-factors: the MEGAphone hand-held console . 
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
+\section{FPGA based architecture}
+The core of both form-factors of the MEGA65 is the FPGA-based components, such as the CPU and video controller, designed by Dr. Paul Gardner-Stephens. The FPGA components are practically complete, with Detlef suggesting a 99\% compatibility with Commodore 64 software. Achieving the last 1\% may be as hard as achieving the previous 99\% though, as such it may not be worth the time to achieve full 100\% compatibility. There are still some bugs present in the FPGA components which need addressed.
+
+\section{Software}
+
+\subsection{Operating System}
+
+\subsection{BIOS/firmware}
+
+\subsection{Applications}
+
+
+
 \section{MEGAphone}
 This section looks at the current state of the MEGAphone. The MEGAphone is the hand-held console form-factor of the MEGA65. 
 
@@ -138,7 +151,7 @@ The MEGAphone electronics hardware is currently in an alpha stage, the PCB is in
 
 \textbf{Noteworthy feature}
 \begin{enumerate}
-\item Installation of insulating tape covering components within the U1A and U1B footprints. This is to provide insulation between conductive part of components and the modem which will be inserted above them. \\
+\item Installation of insulating tape covering components within the U1A and U1B footprints. This is to provide insulation between conductive part of components and the modem which will be inserted above them, seen in figure \ref{MEGAphone_PCB_r1_U1A_clearance} and \ref{MEGAphone_PCB_r1_U14}. \\
 \end{enumerate}
 
 
@@ -171,4 +184,12 @@ The MEGA65 Desktop is planned for a pre-production run of 20 machines using the 
 \subsection{Keyboard}
 The keyboard for the MEGA65 Desktop is being produced by GMK, a German company. It features Cherry MX mechanical switches and 2 embedded metal plates, intended to provide very high stability. There are 2 LEDs for the lock keys, capslock and numlock and 4 RGB LEDs for power and floppy activity indicators, these are all powered by a custom-made communication bus. The keyboard also has a CPLD-based controller in place of the more widely used ARM7 microcontroller, this was done intentional to avoid "having more intelligence inside the keyboard than inside the computer".
 
-Detlef has ordered 25 of these keyboards for the pre-production run, this was intentional more than the 20 cases being produced as mentioned above. It will provide for 5 case-less machines 
+Detlef has ordered 25 keyboards for the pre-production run, this was intentionally more than the 20 cases being produced, as mentioned above. It will provide for 5 case-less machines to use as spare-parts. It is expected that the keyboards will be in a finished state and require no more design work 
+
+\subsection{PCB}
+The PCB provides the interface between the FPGA architecture and the physical circuitry required for such features as the LEDs, I/O ports, speakers and keyboard. The design of the PCB for the MEGA65 Desktop version is being carried out by Antii Lukats at Trenz Elektronik. Currently Lukats is working on the 'r2' version of the PCB and it should be finished in early April, 2019. From there a pre-production run of 25 will be manufactured and then populated with components, before being send to Detlef. 
+
+During the design of the PCB, a challenge arose from the need to combine modern components with much older components such as the floppy disk connector and the 9-pin joystick port. This required a larger number of different voltage levels to power the components than a purely modern component machine. 
+
+\subsection{Other Components}
+To make a finished product the MEGA65 will need more than the computer its self, there also needs to be considerations and preparations made for such things as the box, manual, silica gel for packing, warning and warranty paperwork and CE certification paperwork. To complete the computer itself also requires some extra items such as serial number stickers, warranty seals/stickers, type signs, power supply units, screws, SD card, floppy drives and cables.
