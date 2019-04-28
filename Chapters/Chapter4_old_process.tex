@@ -1,0 +1,187 @@
+%Chapter 4 - Bringing open-source 8-bit projects to the market: process
+%What does the retro computer productization process look like?
+
+\chapter{Bringing open-source 8-bit projects to the market: process}
+\label{Chapter4}
+
+This chapter identifies, lists and discusses the processes other similar projects went through while transforming their product from a prototype to a retail product. An ad hoc process is developed from case studies of the Raspberry Pi, Arduino, Spectrum Next, Spectrum Vega, Spectrum Vega+, C64 DTV and C64 mini. This ad hoc process is then discussed regarding its strengths and weaknesses.
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+\section{Open-source case studies}
+The Arduino and Raspberry Pi where both studied because of their open-source nature, success and because both are relatively simple computers (in the general sense). These project share enough characteristics with the MEGA65 that some useful information was obtainable from these studies.
+
+\subsection{Arduino}
+Arduino started with an idea, to create a cheap microcontroller for students and an accompanying platform to make it easy to use. From the idea stage, then a prototype was built. The prototype in this case is taken to be the microcontroller board and accompanying software Massimo Banzi and David Cuartielles developed in 2005 \cite{RN111}. This prototype had a somewhat convoluted history, being derived from Wiring, another similar project created by a student for their thesis project \cite{RN110}\cite{RN111}. It's worth noting that the software or Integrated Development Environment (IDE) was (and still is) open-source and several others helped in its development, up to and after the prototype stage. Banzi and Cuartielles invited others to help with the project, an advisor Tom Igoe, a student David Mellis to help write the software and Gianluca Martino who could help facilitate the production of the board 
+\cite{RN111}. After discussions with Igoe, the Arduino team decided at some point in 2005, that the target market for their product was much larger than just the students in there respectively schools. The prototype then went into a period of refinement, with the main goals of making it cheap to produce and simple to use. This included fixing some bugs in the hardware design 
+\cite{RN111} and more extensive work on the IDE to included more user-friendly features and allow support for a cheaper chip.
+
+The Arduino team then decided to produce a larger batch of 200 units with a prearranged agreement with two schools to buy 50 units each. The agreement meant to production run would atleast make back half of its cost, even if the other 100 boards where not sold. This reduced the risk to investors (which where Arduino team members in this case). This small production run was meant as a test to see if there was market interest in the product outside of the schools. The team then placed some paid advertisements marketing the Arduino board, as well as discussing the product with friends and colleges to spread word of mouth \cite{RN111}. The Arduino boards started to sell, slowly at first but it was obvious at this point that there was a market for the Arduino board.
+
+As the Arduino is a single-board device with no case or human interface device (HID), the  hardware process from working prototype to finished design was relatively simple, it was just the electronic board design and parts selection with regard to price, quality and availability and then manufacturing. There was also software actively being worked on during this time as well.
+
+The fact that Arduino creators didn't know if half of the first production run would sell and if it did, whom would be interested in it, leads to the idea that they didn't do a lot of market research before hand. The team thought of the first production run as a test to gauge market interest.
+
+
+\textbf{Steps Identified}\\
+\begin{enumerate}
+\item Construct a working prototype to fulfil an idea or need.
+\item Decide final product features and specifications based on prototype feedback.
+\item Refine prototype to remove bugs/errors and add any features that are required for the product launch.
+\item Add team members as needed to help grow the project. Focus on what skills they can provide when deciding on members.
+\item Self fund a small production run of the final product.
+\item Place advertisements and use word of mouth to spread awareness of the product.
+\item Partner with or form agreements with distributors to increase the availability of the product.
+\end{enumerate} 
+
+
+\subsection{Raspberry Pi}
+The Raspberry Pi first started with a desire to help children engage with computers and computer topics. Eben Upton, one of the founders of the Raspberry Pi Foundation, decided the best way to achieve this was to give them access to a cheap computer that they could \"mess around\" with and learn along the way, much as he did with a BBC Micro when he was young 
+\cite{RN98}. Upton built several prototypes while trying to achieve this goal. The first was built in 2006 using a microcontroller as the core and gave about the same computational power as a BBC Micro 
+\cite{RN137}. Upton originally thought a highly-integrated remake of the BBC Micro would meet his goal but after discussion with like minded people, Upton abandoned this in favour of a more powerful machine 
+\cite{RN98}. Upton team-up with other like minded individuals in 2009 and formed the Raspberry Pi Foundation with the stated goal to "put the power of computing and digital making into the hands of people all over the world." 
+\cite{RN138}. Upton and the rest of the foundation now faced the problem that all the microprocessor available at the time where too expensive to include in a computer which needed to be cheap. It wasn't until a couple of years later that Upton found a suitable chip, the Broadcom BCM2835, a System-on-Chip (SoC), which is a complete microcomputer within a chip. In 2011, the Raspberry Pi Foundation had made a new prototype, with the BCM2835 at its core. This new prototype was shown publicly in May 2011 and received a huge amount of attention 
+\cite{RN140}. In this somewhat unplanned showing, the Raspberry Pi team said they would have it finished by May 2012 and it would cost \pounds 15. This self-imposed deadline put some pressure on the team to finish by their publicly stated date.  
+
+Over the few months the prototype design was refined, with the goal of trying to keep the board within \$35 USD. During this process several features where cut to save costs 
+\cite{RN98}. Upton also embarked on a campaign to secure parts at a cheap as a possible price 
+\cite{RN98}. A version of the Linux OS, designed specifically for the Raspberry Pi, was also in development \cite{RN98}.
+
+Once the team had the designs for the final product agreed upon, they originally planned to make 1000 unit in the first production run to gauge the market
+\cite{RN139} but after the May 2011 showing received so much attention, they revised the initial run to 2,000 units \cite{RN98}. The funds for the original production came from donations from the trustees of the Raspberry Pi Foundation 
+\cite{RN142}. The Raspberry Pi team then had to find a manufacturer and ended up finding an outfit in China which could make the raspberry at a decent price \cite{RN98}. Not long after securing this initial run in 2011, the raspberry pi team realised they had more demand for units than they could secure funds to manufacture, they estimated 10,000 units would need to be made for the launch. To help solve this problem, the Raspberry Pi team partners with two large companies right before the product launch, Element14 and RS. They both agreed to distribute and manufacture the Pi, so the Raspberry Pi team pivoted at this point to becoming a designing and licensing business and not a manufacture of the Raspberry Pi 
+\cite{RN98}. This partnership secured worldwide distribution and manufacturing channels, something the Upton is very proud of as he says it let the Raspberry Pi grow a lot faster \cite{RN98}.
+
+\textbf{Steps Identified}\\
+\begin{enumerate}
+\item Construct a working prototype to fulfil an idea or need. This prototype is taken as the first with a Broadcom chip, shown publicly in May 2011.
+\item Form foundation or other body to hold licenses and other IP.
+\item Add team members as needed to help grow the project. Focus on what skills they can provide when deciding on members.
+\item Decide final product features and specifications based on prototype feedback.
+\item Refine prototype to remove bugs/errors and keep of end product cost down. Develop software needed for launch, OS and applications.
+\item Get agreements for parts at acceptable prices from suppliers.
+\item Launch website and have online presence, try to generate awareness through media.
+\item Self fund a production run of the final product, 2000 units.
+\item License out product to larger companies which can make and distribute the product better and faster
+\end{enumerate} 
+
+
+\section{Retro revival project case studies}
+These case studies look at a group of products that are inspired by 8-bit computers from the home computer era mentioned in \ref{sec: Early home computer era}. Two of the biggest names from that time, Spectrum, which was hugely popular in Britain and Commodore, which was hugely popular in the USA are both reproduced in modern revival projects. These projects are similar to the MEGA65 project and as such are studied in the hope of increasing the chance of the MEGA65 being successful. 
+
+\subsection{Sinclair ZX Spectrum Vega}
+\label{Vega process}
+The Sinclair ZX Spectrum Vega first came to public attention due to a crowd-funding campaign launched by it creators Retro Computer (RCL) on Indiegogo in 2014. The campaign was intending to raise the capital needed manufacturer the first production run of the Vega. The campaign was successful, raising 149\% of their intended goal or \pounds 155,682. Retro Computers Limited (RCL) claimed in the campaign that the design was complete already and that RCL had agreements in place to use the Sinclair brand as well as the rights to use 1,000 games that would be shipped with the Vega. The terms of the agreement with the games rights holders was that RCL can distribute the games on the Vega but for each Vega sold a donation must be made to a charity for 10\% of the Vega purchase price. To secure the rights to use the Sinclair name, Paul Andrews, the managing director of RCL at the time, reached out to Sir Clive Sinclair to seek his approval, which was forthcoming with the provision that David Levy be able to join RCL and provide oversight on behalf of Clive. Once the crowd-funding campaign had secured funding, RCL went about finding a manufacturer and in January 2015 they announced they had formed an agreement with SMS Electronics Ltd to manufacture the Vega. Later the same month RCL announced that they have received suggestions on how to improve the Vega from various parties and they would be implementing two of them: adding extra buttons and adding an hardware interface and ability to upgrade the software. RCL also noted that the Vega had passed the required ECM (Electromagnetic compatibility) test in June 2015. Later the same month RCL posted on the Indiegogo campaign page that the first production run of the Vega had been complete but they could not legally send them to backers yet as they first needed a PEGI (Pan European Game Information) age rating. RCL announced that the first batch of Vegas where sent to backer on the 7th of August 2015.
+
+
+\textbf{Steps Identified}\\
+\begin{enumerate}
+\item Construct a working prototype to fulfil an idea or need, in this case it was basically feature complete and finished, this included the electronics design as well as the tooling and case designs and software. 
+\item Form agreement with relevant license or rights holders to use their IP.
+\item Launch crowd-funding campaign to raise capital for first production run.
+\item Find and form agreement with manufacture/s to produce product.
+\item Refine prototype based on community suggestions.
+\item Organise to have product tested as required by relevant laws. The Vega needed to pass an ECM test and a PEGI age rating test.
+\item Launch website to sell product and have an online presence.
+\item Send out finished product to backers.
+\end{enumerate} 
+
+
+
+\subsection{Spectrum Vega+}
+The Spectrum Vega+ was the next product offered by Retro Computers Limited (RCL) after the Spectrum Vega, mentioned above in section \ref{Vega process}. Like the Vega, the Vega+ used a crowd-funding campaign on Indiegogo to raise capital to fund the first production run of 2,500 units and prepare for the second production run 
+\cite{RN143}. When the campaign was launched on 15th February 2016, RCL claimed they had a working prototype of the Vega+ and supplied video evidence to back up this claim 
+\cite{RN145}\cite{RN143}. The campaign closed on the 27th of March 2016 having successful reached its target; it raised 366\% of the target or \pounds 512,790. 
+But not long after the end of the campaign, two of the directors of RCL resigned citing "irreconcilable differences" between them and the remaining directors
+\cite{RN146}. One of the directors, Chris Smith, was also the creator and owner of the firmware which was created to run the Vega+, when he left he took the rights to use them with him and refused RCL the rights to use it in the upcoming Vega+. This proved to be a difficult situation for RCL to recover from while under the leadership of the sole remain director, Dr David Levy. RCL eventually released a small number of the Vega+ consoles to no more than 400 of the over 4,500 backers of the campaign after Indiegogo threatened to send debt collectors after RCL to recover the funds unless backers received a Vega+ 
+\cite{RN147}. RCL has now been wound-up by creditors demanding payment and no more Vega+ consoles are ever likely to be made, leaving thousands of backers without the product they paid for and hundreds of thousands of pound unaccounted for 
+\cite{RN120}\cite{RN148}. By almost any metric it can be said the Vega+ project was an abject failure and such the process they used will be of little value. 
+
+\textbf{Steps Identified}\\
+\begin{enumerate}
+\item Construct a working prototype to fulfil an idea or need.
+\item Launch crowd-funding campaign to fund first production run and prepare for second run
+\item Lose rights to use prototype from first point, forced to remake the firmware because of this.
+\item Add team members as needed, Levy brought in two new directors after Smith and Andrew resigned.
+\item Make promises to backers about the imminent delivery of the product but don't deliver, this happened numerous times after the end of the crowd-funding campaign, which was during the development of the Vega+ with the new firmware.
+\item Release a very small number of units to some backers after multiple threats of debt collectors from Indiegogo and legal challenges from backers trying to receive refunds.
+\item Wind-up business and stop communicating with backers.
+\end{enumerate} 
+
+
+
+\subsection{ZX Spectrum Next}
+The ZX Spectrum Next is an innovation of the ZX Spectrum from 1982. It is currently in the production phase of development after successfully raising \pounds 723,390 on a crowd-funding campaign on Kickstarter. When the crowd-funding campaign was launched on April 23rd 2017, the Next team had a working prototype with most of the hardware design finished, they did add some features later when the crowd-funding campaign was so successful \cite{RN151}. They also had CAD designs for the case and keyboard completed before the campaign \cite{RN149}. With the capital raised from the crowd-funding campaign they intend to fund the first production run of the Spectrum Next. Not long after the end of the campaign which was on the 23rd of May 2017, The Next team released a website to act as a Next portal to house information for the community including hardware, software, drivers and firmware for the Next 
+\cite{RN154}. In April 2018, the Next team promised to have fortnightly updates on the Kickstarter page, this was in response to backers requests \cite{RN155}. They also mentioned they have nearly decided on a manufacturer for the keyboard and the case 
+\cite{RN155}. The electronic manufacturer had been decided earlier \cite{RN151}. The Next team also mentioned in April 2018, their plans for the box and manual that would be included with the Next \cite{RN151}.
+
+\textbf{Steps Identified}\\
+\begin{enumerate}
+\item Construct a working prototype. Create finished CAD drawings of the keyboard and case.
+\item Launch crowd-funding campaign to raise funds for the first production run.
+\item Refine prototype to add new features, made possible by the crowd-funding campaign raising more than expected. 
+\item Regularly make updates to backers informing them of the progress made or problems faced.
+\item Launch website portal to house community information and have online presence outside of Kickstarter.
+\item Decide on manufacturers or keyboard, case and electronics.
+\item Have manufacturers produce sample products for testing and quality control.
+\item Adjust CAD drawing and make any other changes needed based on samples from manufactures.
+\item Secure components for manufacturing e.g. RAM, resistors, capacitors etc. 
+\item Finish work on manual and box designs and content.
+\item Agree to start final production run with manufacturers. 
+\end{enumerate} 
+
+
+\subsection{C64 Mini}
+Retro Games didn't have a functional prototype at the campaign launch, it wasn't shown till August 2016, running on preproduction hardware. After campaign had finished, Retro Games tried to partner with a manufacturer and distributor to get the c64 worldwide retail release. Retro Games secured extra funds missing from crowd-funding campaign as well as focusing on c64 Mini first at partners request. Retro Games worked on circuit design for 3 form-factors of the C64 range, as well as CAD designs for case and keyboard and component selection. Retro Games also sought agreements from game developers to use their games in the Mini during production period. 
+
+\textbf{Steps Identified}\\
+\begin{enumerate}
+\item Launch crowdfunding campaign.
+\item Create functional prototype on preproduction hardware.
+\item Find partner to invest, manufacture and distribute.
+\item Re-evaluate with partner best business direction (Retro Games focused on C64 Mini form-factor)
+\item Secure game rights.
+\item Finish circuit designs for final product and component selection and sourcing. Design with compliance in mind.
+\item Create CAD drawings of case and keyboard.
+\item Create manual and box design.
+\item Test pre-production units and make amendments to product or processes as needed.
+\item Start production run and send to backers.
+\item Retail release.
+\end{enumerate} 
+
+
+\subsection{C64 DTV}
+The C64 DTV was an innovation of an earlier product, the C-One. The C-One is a single-board C64 clone that uses FPGA technology. The DTV is a smaller version of the C-One which fits into a accompanying joystick case, as shown in figure \ref{C64_DTV}. The DTV is aimed at letting users play Commodore 64 games, of which 30 where included. The DTV does not support the ability to load game ROMs after purchase but it is possible with some after-market modifications 
+\cite{RN161}.
+
+\textbf{Steps Identified}\\
+\begin{enumerate}
+\item Construct a working prototype to fulfil an idea or need, the prototype here is taken as being the prototype which lead to the C-One. 
+\item Partner with others that can help turn the prototype into a product, the C-One.
+\item Agree to turn the C-One into a game console, partner with others to help make this happen.
+\item Design and create the C64 DTV based off the C-One.
+\item Allow partners to market and distribute product.
+\end{enumerate} 
+
+
+\section{Ad hoc process comparison to Lean Start Up method}
+This section consolidates the ad hoc processes collected from the case studies above, briefly introduces the Lean Start Up method and then compares these two methods. A discussion of any interesting or useful conclusions drawn from the comparison follows.
+
+\subsection{Combining ad hoc processes from case studies}
+The following is a combination of the ad hoc processes identified above. The steps that are common to all or most are included as well as two possible funding models.
+
+\textbf{combined ad hoc process}\\
+\begin{enumerate}
+\item Construct a working prototype.
+\item Control IP.
+\item Research relevant laws and regulatory obligations and make design changes to accommodate as well as budgeting for any costs likely to be incurred in future testing.
+\item Decide final product features and specifications based on prototype feedback.
+\item Add team members as needed to help grow the project. Focus on what skills they can provide when deciding on members.
+\item Create CAD designs for case, keyboard and any other parts that need to be custom made for the final product.
+\item Launch crowd-funding campaign or raise funds through private investors or businesses for first production run.
+\item Refine prototype to remove bugs/errors and add any features that are required for the product launch.
+\item Launch website to give a web presence and foster a community.
+\item Find manufacturer for electronics, plastics (case, keyboard etc) and source components.
+\item Partner with or form agreements with distributors to increase the availability of the product and market the product.
+\end{enumerate} 
+
+Most of the discovered processes from the case studies agreed on a vague outline of a process which is listed above. One of the points of difference between the ad hoc processes is how much of the design work was complete before announcing the release of the product to the public, either through a crowd-funding campaign or other method. The decision to announce earlier in the design process may be due to businesses constraints, if the project is in need of funds to continue then announcing early may be worth the increased risk. The risk in announcing early is due to uncertainty in several factors: currency changes, law changes such as 'Brexit', unknown costs for manufacturing and design changes. The other main point of difference was where to use a crowd-funding service to raise capital or to rely of private investor and/or business partnerships or a mixture of both. With regard to a crowd-funding campaign, it has been proven to be possible to be successful but a successful campaign, such as the Next, Vega and Vega+ had several common features. Successful in this context relates solely to the campaigns fund raising effort, not the end result generated from the funds. The 3 campaigns named all had a lot of information about the product as well as a working prototype to show in video. All 3 campaigns also posted regular updates as well as responding to community requests and/or concerns.
