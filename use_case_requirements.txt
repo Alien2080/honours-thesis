@@ -1,0 +1,70 @@
+Use Case Requirements
+-----------------------
+Physical Hardware
+
+ SD card drive
+ SD card
+ power switch
+ Ability to navigate through menus and play games i.e. human interface device. For the desktop form factor this would be a full-sized keyboard. For the MEGAphone form factor menu interactions, it could be either buttons or a touch screen or both. Playing a game would require the d-pad and at least one button on the MEGAphone.
+ Speaker
+ Volume controller/s
+ Joystick port
+ keyboard port
+ FPGA port (ethernet?)
+ cellular modem socket
+ cellular modem
+ microphone
+ 
+ 
+Software
+
+ SD card drive firmware and/or FPGA components to enable reading from SD card
+ Relevant version of BASIC 
+ Game software
+ Freeze Menu - ability to view SD card contents and load images
+ Freeze Menu - ability to enter Freeze Menu from any program
+ Stable MEGA65 FPGA components with ability to boot and run game when supplied with the relevant BASIC ROM
+ human interface device firmware/drivers created, installed and configured to work with relevant hardware
+ speaker drivers
+ volume control drivers 
+ Freeze Menu - ability to change CPU modes to decrease speed to Commodore 64 levels
+ Freeze Menu - ability to "freeze" a program and then reload its state on request
+ Joystick drivers
+ Hypervisor - ability to turn on/off joystick support
+ 8-bit application software
+ Freeze Menu - ability to change CPU modes to increase speed
+ keyboard drivers
+ Matrix mode
+ ability to create a secure compartment
+ ability to encrypt a text document
+ telephony software
+ cellular modem drivers
+ microphone drivers
+ MEGAwat software
+ 
+ 
+ 
+ Functional requirements
+ ----------------------------------------------
+ read from SD card
+ power switch
+ navigate through menu with a HID
+ can create audio
+ can adjust the speaker volume
+ can connect an external joystick
+ can connect an external keyboard
+ can connect an FPGA cable?? ethernet??
+ can change CPU speeds, Commodore 64 speed essential for C64 games, max speed very useful increasing responsiveness in some applications
+ ability to "freeze" a program and then resume it
+ Matrix mode
+ ability to request a secure compartment
+ ability to encrypt a text document
+ 
+ 
+ includes:
+ game software
+ 8-bit application
+ text editing software
+ MEGAwat software
+ BASIC ROM
+ telephony software
