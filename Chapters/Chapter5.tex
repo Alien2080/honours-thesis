@@ -1,7 +1,8 @@
 %Chapter 5 - Evaluating the MEGA65 project against known risks
-%
+%	How exposed to risks is the MEGA65 project july 19?
+%	What can be done to reduce the MEGA65 project’s risks?
 
-\chapter{Evaluating the MEGA65 project in July 2018 against known risks}
+\chapter{Risk evaluation of the MEGA65 project in July 2018}
 \label{Chapter5}
 This chapter aims to provide useful advice to the MEGA65 project with the aim of reducing the project's risk. To achieve this, the detailed snapshot of the project's progress at the point in time of July 2018, chapter \ref{Chapter4}, is evaluated to determine its risk levels in the known risks identified in the case studies in chapter \ref{Chapter3}. The layout of this chapter is that each risk identified in the risk list is given a section and within each section the MEGA65 project is scrutinised to determine its risk level to that specific risk. At the end of the chapter a conclusion is drawn on the MEGA65 project's risk level as of July 2019. For the identified high risk areas, some advice that could reduce the project's risk level is given. This advice is in the form of alternate solutions or methods of doing things and their potential risk reduction. The risks to the MEGA65 project are determined by following the guidelines given in \textit{AS ISO 31000:2018 Risk management — Guidelines} 
 \cite{RN164} and categorised using the definition of damage listed in the table at the start of chapter \ref{Chapter3}. The risk is determined using the risk matrix figure \ref{riskmatrix}.
@@ -93,7 +94,6 @@ THE MEGA65 project has exposure to this risk in several areas. Due to the nature
 \item Commodore 64 character set
 \item Commodore 64 BASIC ROM
 \item Commodore kernel ROM
-\item Use of Commodore name
 \end{enumerate}
 
 \textbf{Commodore logo on Commodore key} \\
@@ -115,6 +115,7 @@ Likelihood - Rare \\
 Potential Damage - Marginal \\
 Risk - Low \\
 
+
 \textbf{Commodore 64 character set}\\
 The MEGA65 requires a set of character bitmaps stored in memory, this is used to display text on the screen. The Commodore 64 character set would be ideal for this purpose as it is readily available from numerous website and would help the MEGA65 replicate the Commodore 64 more closely. The Commodore 64 character set is intellectual property, as such its use in the MEGA65 project brings risk. The MEGA65 project currently does not have an agreement to use the Commodore 64 character set. There is a certain likelihood of this occurring and a marginal level of damage that could occur. \\
 
@@ -135,20 +136,9 @@ Risk - Extreme \\
 The MEGA65 requires this ROM for basic functionality and it is of critical importance to the compatibility of the MEGA65 with Commodore 64 software that the kernel used function as the Commodore 64 kernel does. The ideal candidate kernel if only the functionality of the MEGA65 is considered, is the Commodore 64 kernel. This kernel is intellectual property as such it will attract a risk if used without an agreement with the rights holder. The MEGA65 project does not currently have an agreement with the rights holder. The potential damage from this risk is from the rights holder undertaking legal action against the MEGA65 project. The likelihood of this event occurring is considered unlikely as the ROM has been available online for decades with no noticeable attempt to control its distribution. The potential damage is catastrophic as the MEGA65 could not function without a kernel and if the Commodore 64 kernel was not able to be used suddenly, the MEGA65 would effectively be useless until a replacement was found. \\
 
 Likelihood - Unlikely \\
-Potential Damage - Catastrophic
-Risk - Extreme
+Potential Damage - Catastrophic \\
+Risk - Extreme \\
 
-
-This is the main problem area:
-- MEGA65 wanted to use a Commodore logo on the Commodore keyboard key
-ask Paul if they had agreement to use commodore icon
-recommend they don't use Commodore icon but a similar design
-
-- MEGA65 NEEDS to use BASIC ROM/s to function as a Commodore compatibly computer
-ask paul if they have agreement
-recommend they don't use 3rd party BASIC ROM and consider producing their own
-
-- games and applications licence
 
 \section{Open-source business}
 The MEGA65 project will be exposed to this risk, which is related to competitors being able to produce and sell the MEGA65 with no money being generated for the MEGA65 team. This means it can be harder to operate as a traditional electronics business in which its products are propriety and they can discourage competitors using there designs with legal challenges. The MEGA65 project is likely to not have a large market, as such the cost to enter the market is quite high compared to the potential profits. This will help reduce the likelihood of this occurring as long as the assumption that the MEGA65's market is small, remains true. The MEGA65 project is rated as possible for the likelihood of this occurring and a critical level of damage could be caused. \\
@@ -167,19 +157,40 @@ Risk - Low \\
 
 
 \section{Supplier failure}
-The MEGA65 is exposed to this risk where ever they purchase from a 3rd party. The potential damage and likelihood of this event occurring is specific to each supplier and each purchase. The likelihood of this event occurring can be reduced by using reputable established suppliers as well as undertaking due diligence into suppliers before entering into agreements.
+The MEGA65 is exposed to this risk whenever they purchase from a 3rd party. The desktop version which is undergoing physical development with MEGA, and is intended to enter a pre-production stage of development soon, is rated as having a marginal rating of potential damage should this event occur. This is due to the fact the while the desktop version is in pre-production it will have several different components being manufactured by different suppliers. These components need to be assembled together to form the MEGA65 desktop version once they are all complete. A delay in any of the components could cause a time delay in the overall construction of the MEGA65 desktop version preproduction run. A delay could also incur additional costs if a new manufacturer has to be found or if there are storage costs caused by the delay. The desktop version is rated as having a unlikely chance of this event occurring as the suppliers chosen are established businesses. The other MEGA65 form factor, the MEGAphone, is undergoing the alpha stage of production as such the purchases are currently small as they are focused on a single prototype. This reduces the potential damage to negligible during this phase. As the MEGA65 products enter full production the risk increases. The MEGA65 team members are aware of this risk and of the preference to use established businesses and undertake due diligence. With all the above factors considered, the MEGA65 project is rated as having a marginal level of potential damage and a unlikely chance of this event occurring. \\
 
-
+Likelihood - Unlikely \\
+Potential Damage - Marginal \\
+Risk - Low \\
 
 \section{Open-source fair use}
-should not be a concern for MEGA65
+This should not be an issue for the MEGA65 project as all of the open-source components are created by project members or freely available to be used in projects such as the MEGA65. \\
 
-ask paul if they used any open-source components
+Likelihood - Rare \\
+Potential Damage - Negligible \\
+Risk - Low \\
 
 
 \section{Physical production problems}
+The MEGA65 project is exposed to this risk in both its form factors. The desktop version will require physical mechanical components such as a keyboard and case. Both of these components have the potential to experience problems during manufacturing, assembly or testing. These problems such as incorrect material, incorrect size, rough edges or wrong shape to name a few, could potentially cost the project lost time and money. The desktop version has a possible chance of this event occurring and a negligible level of potential damage. The MEGAphone form factor which is much less advanced in its physcial design compared to the desktop version, is more exposed to tis risk. This is due to the case design having not been created or tested as well as the use of touch screen and button interface, all of which add complexity to the design. The potential damage for the overall project is rated as marginal and it has a posible chance of occurring. \\ 
+
+Likelihood - Possible \\
+Potential Damage - Marginal \\
+Risk - Moderate \\
 
 
 \section{Advice on how to reduce MEGA65 project risk exposure}
-In this section practical, actionable advice will be given on how to MEGA65 project can reduce their exposure to the risks identified in chapter \ref{Chapter4}. Using the risk evaluation of the MEGA65 project as of July 2018 as a starting point, this section aims to reduce the risk by focusing on the highest risk areas and suggesting strategies to reduce the risks.
+In this section, practical, actionable advice will be given on how the MEGA65 project can reduce their exposure to the risks identified in chapter \ref{Chapter4}. Using the risk evaluation of the MEGA65 project as of July 2018, as a starting point, this section aims to reduce the risk by focusing on the highest risk areas and suggesting strategies to reduce that risks.
+
+\subsection{Law and Regulations}
+The MEGA65 project is aware of the need to undertake research into the laws and regulations of the specific markets into which they want to sell the MEGA65. To reduce their risk they must undertake aforementioned research. The potential damage to the MEGA65 project is increased the further the development goes forward without this research. Assuming the research is conducted the likelihood is reduced to rare and a potential risk marginal if the research is conducted in a timely manner.
+
+\subsection{Sourcing old components}
+The MEGA65 projects use of floppy disk drives opens up the potential for damage in the future if the become obsolete (which they arguable are already). As they are manufactured less and become rarer, their unit price would be expected to increase. To compensate for this a large inventory of the disk drives could be sourced much earlier than required for production. This could bring twofold benefits in the unit price may come down with a large unit number purchase and the MEGA65 is shielded from component volatility in the medium term (until the stocked drives run out). The downside to this strategy is storage costs as well as increase upfront costs in purchasing the drives.
+
+\subsection{Use of 3rd party intellectual property}
+The use of 3rd party software has opened up the MEGA65 project to some high risks. The use of the software is almost unavoidable in cases, if the MEGA65 is to be a true innovation of the Commodore 65 and Commodore 64 compatible. The main areas identified above are the Commodore icon on the Commodore keyboard key and the ROMs required for Commodore 64 compatibility: the character set ROM, BASIC ROM and the kernel ROM. The only options to reduce the risk are to either entered into an agreement with the rights holder and barring that simple not use them in the MEGA65. Suitable replacments may be found in some cases. The Commodore icon could potential be changed to a MEGA65 inspired design. The character set, while being closely llinked to the COmmodore 64 experience, could be swapped for another more readily available set. The kernel and BASIC ROM are less likely to have suitable replements readily available. Another stratergy would be to create the ROMs within the MEGA65 project. This would completely eleminate the potential risk, as long as the replacements didn't break any copyright laws. 
+
+\subsection{Open-source business}
+This risk increases with MEGA65's popularity and market size. At a certain threshold of unit sales other businesses will consider manufacturing the MEGA65 from the open-source designs and selling it themselves. This will not generate any revenue for the MEGA65 team and may be a problem in the long term, depending on the MEGA65's popularity. It may be worth trademarking the MEGA65 name and then later licensing its use to generate profit. The MEGA65 team should also consider branching out into accessories for the MEGA65 as a strategy for dealing with this risk. Dr. Paul Gardner-Stephens and other core team members could also consider commissioned advisory roles and presentations as another strategy. 
 
