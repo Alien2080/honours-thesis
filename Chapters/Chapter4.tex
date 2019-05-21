@@ -1,32 +1,28 @@
 %Chapter 4 - MEGA65: A retro revival project
 %What is the MEGA6565 project?
 
-\chapter{MEGA65: A retro revival project}
+\chapter{MEGA65: A retro-computing project}
 \label{Chapter4}
 
-This chapter outlines the current state of a retro revival project, the MEGA65, mentioned in chapter \ref{Chapter2}. By first giving a description of the intended products of the project as the project members intend. Then a use case study of the MEGA65 is carried out to further describe the product, it's intended markets and to elicit requirements to realise the use cases. This detailed information about the MEGA65 project is then used in the next chapter, chapter \ref{Chapter5} to evaluate the project against the risk list that was obtained from the case studies in chapter \ref{Chapter3}.
+This chapter describes and outlines the current state of a retro-computing project, the MEGA65, mentioned in chapter \ref{Chapter2}. This chapter first provides a description of the MEGA65 project and it's intended products. Then, a use case study of the MEGA65 is carried out to further describe the products and their intended markets. The use case study is also used to elicit the requirements needed to realise the use cases. This detailed information about the MEGA65 project is then used in the next chapter, chapter \ref{Chapter5}, to evaluate the project against the risk list that was obtained from the case studies in chapter \ref{Chapter3}.
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
-\section{MEGA65}
-The MEGA65 is a innovation of the Commodore 65 built using FPGA technology at its core, more details are given in section \ref{History of the MEGA65 project}. The MEGA65 is planned to have two separate form factors: a hand-held game console with 2 cellular modem sockets to allow for telephony, called MEGAphone and a desktop form-factor inspired by the look of the Commodore 64. During development of the MEGA65, the MEGA65 team got into discussions with the Museum of Electronic Games and Art (MEGA) and came to an agreement with MEGA that they will handle the physical development of the MEGA65 desktop version. Both form-factors are to have the same FPGA chip and FPGA implementation. This means they are the same computer at the core and can run the same software, in fact both form-factors are intended to ship with the same software, both custom software made specifically for the MEGA65 and 3rd party software. Both form-factors are collectively referred to as the MEGA65. The MEGAphone is to be developed further at Flinders University, with the original MEGA65 team members as well as involving students from the university. The desktop version is to have its physical development handled by MEGA. Physical development refers to the Printed Circuit Board (PCB) housing the FPGA and other components, the case and keyboard. 
+\section{MEGA65 description}
+The MEGA65 is a innovation of the Commodore 65, built using FPGA technology at its core, more details are given in section \ref{History of the MEGA65 project}. 
+
+The MEGA65 is planned to have two separate form factors: a hand-held game console with two cellular modem sockets to allow for telephony, called MEGAphone and a desktop form-factor inspired by the look of the Commodore 64. During development of the MEGA65, the MEGA65 team got into discussions with the Museum of Electronic Games and Art (MEGA) and came to an agreement with MEGA that they will handle the physical development of the MEGA65 desktop version. Both form-factors are to have the same FPGA chip and FPGA implementation. This means they are the same computer at the core and can run the same software, in fact both form-factors are intended to ship with the same software, both custom software made specifically for the MEGA65 and 3rd party software. Both form-factors are collectively referred to as the MEGA65. 
+
+The MEGAphone is to be developed further at Flinders University, with the original MEGA65 team members as well as involving students from the university. The desktop version is to have its physical development handled by MEGA. Physical development refers to the Printed Circuit Board (PCB) housing the FPGA and other components, the case and keyboard. 
 
 \subsection{MEGA65 team}
-- make up of team
-- project funding
-- 
+As it is relevant to the risk evaluation undertaken in chapter \ref{Chapter5}, this section will briefly describe the MEGA65 team and funding model. The MEGA65 team is centred around Dr Paul Gardner-Stephen, the inventor and lead contributor to the MEGA65. Dr Paul Gardner-Stephen is a senior lecturer at Flinders University. The MEGA65 project was started as a hobby and the goal of the project is not to generate a profit, as it was in many of the case studies. The project is funded, in part, by the university because the project acts as a conduit for student learning. Many of the other project members are volunteers or students.
 
 \subsection{Hardware}
-Desktop
-- 3.5 " floppy drive
-- keyboard, full size etc
-- SD card
+This section briefly describes the hardware, such as the human interface devices of the MEGAphone and desktop form factor of the MEGA65. 
 
-MEGAphone
-- touch screen interface
-- d-pad, buttons
-- cellular modems sockets
-- speakers
-- battery
+The desktop form factor is planned on featuring a built-in 3.5 inch floppy disk drive, like the Commodore 65 prototype. The desktop form factor will also feature a full-size keyboard. It will require a monitor to be connected to view its output. It will also have a SD drive.
+
+The MEGAphone is the hand-held game console form factor of the MEGA65. It is planned that the MEGAphone will feature its own screen with internal battery and speakers, allowing for mobile usage. The screen will be a touch screen interface with additional controls provided by a d-pad and 4 buttons. The MEGAphone will also feature two sockets for the connection of a cellular modems and the required support to be able to use them to make phone calls and send text messages. It will also have a SD drive.  
 
 \subsection{Software}
 The MEGA65 has had a range of custom software created for it, this section aims to list and describe that software. This will help further describe the MEGA65 as a product as well as give some explanation of the functions available to these pieces of software which will be helpful to carry out the use case studies.\\
@@ -53,7 +49,6 @@ An out-of-band machine state inspection tool which allows the user to inspect th
 
 \textbf{Secure Mode}\\
 Is a special mode to allow the untrusted components of the MEGA65 to be excluded from the current working environment. This includes the cellular modem and SD card among others. Figure \ref{secure_compartment} shows the secure compartment and the untrustworthy components.\\
-
 
 \begin{figure} \begin{center}
 \includegraphics[width=.3\linewidth]{pics/secure_compartment} 
@@ -337,45 +332,45 @@ Software\\
 \item keyboard drivers
 \end{enumerate}
 
-\section{MEGA65 state as of July 2018}
-This section highlights the state of the MEGA65 at the beginning of this thesis project. This is useful to help illustrate the MEGA65 project as a whole as well as to indicate its current state of completeness. This was achieved by using the requirements gathered from the use case study above and then eliciting the state of the MEGA65 from the MEGA65 team.
+\section{State of the MEGA65 as of July 2018}
+This section highlights the state of the MEGA65's development at the beginning of this thesis project. This is useful to help illustrate the MEGA65 project as a whole as well as to indicate its current state of completeness. This was achieved by using the requirements gathered from the use case study above and then eliciting the state of the MEGA65 from the MEGA65 team. Table \ref{tab:table1} shows the requirements and whether they where able to be met as of July 2018. A brief discussion of some of the table \ref{tab:table1} entries follows. 
+
+The desktop form factor is practically complete with a working keyboard which is used to navigate through the menus. The MEGAphone is still in development and the touch screen and buttons are not yet working. The MEGAphone can be controlled via an external keyboard.
+
+The MEGAphone doesn't have speakers attached but the supporting circuitry and components are present. The volume control thumb knobs are also not attached. 
 
 \begin{table}[h!]
   \begin{center}
     \caption{MEGA65 state of completeness as of July 2018}
     \label{tab:table1}
-    \begin{tabular}{l|l} % <-- Alignments: l=left, c=centre, r=right
-      \textbf{Requirement} & \textbf{Can the MEGA65 meet requirement?}\\
+    \begin{tabular}{l|l|l} % <-- Alignments: l=left, c=centre, r=right
+      \textbf{Requirement} & \textbf{Desktop} & \textbf{MEGAphone}\\
       \hline
-      Read from SD card 									& yes \\
-      Power switch											& yes \\
-      Navigate through menu with HID						& yes via keyboard; no for megaphone without external keyboard\\
-      Can produce audio										& yes: megaphone no \\
-      Can receive audio from cellular modem					& no 	\\
-      ability to adjust speaker volume						& yes \\
-      Can connect external joystick							& yes \\
-      Can connect external keyboard							& yes \\
-      Can connect USB cable for FPGA data transfer			& yes \\
-      Ability to change CPU speeds							& yes \\ 
-      Commodore 64 CPU speed available						& yes \\
-      35-50 MHz CPU speeds available						& yes \\
-      ability to 'freeze" a program then resume it			& yes \\
-      Matrix mode											& no \\
-      ability to request a secure compartment				& no \\ 
-      ability to encrypt a text document					& no \\ 
-      game software											& yes \\
-      8-bit application										& yes \\
-      text editing software									& yes \\
-      MegaWAT software										& no \\
-      BASIC ROM												& yes \\
-      telephony software  									& partial \\
-  	  text messaging software								& partial \\
-  	  ability to encrypt phone calls						& no \\
-  	  ability to encrypt text messages and attached files	& no \\
+      Read from SD card 									& yes		& yes \\
+      Power switch											& yes 		& yes \\
+      Navigate through menu with HID						& yes		& partial \\
+      Can produce audio										& yes		& no \\
+      Can receive audio from cellular modem					& N/A		& no 	\\
+      Ability to adjust speaker volume						& yes		& partial \\
+      Can connect external joystick							& yes 		& yes \\
+      Can connect external keyboard							& yes		& yes \\
+      Can connect USB cable for FPGA data transfer			& yes 		& yes \\
+      Ability to change CPU speeds							& yes 		& yes \\ 
+      Commodore 64 CPU speed available						& yes 		& yes \\
+      35-50 MHz CPU speeds available						& yes 		& yes \\
+      Ability to 'freeze" a program then resume it			& yes 		& yes \\
+      Matrix mode											& no 		& no \\
+      Ability to request a secure compartment				& no 		& no \\ 
+      Ability to encrypt a text document					& no 		& no \\ 
+      Game software											& yes 		& yes \\
+      8-bit application										& yes 		& yes \\
+      Text editing software									& yes 		& yes \\
+      MegaWAT software										& no 		& no \\
+      BASIC ROM												& yes 		& yes \\
+      Telephony software  									& N/A		& yes \\
+  	  Text messaging software								& N/A		& yes \\
+  	  Ability to encrypt phone calls						& N/A		& no \\
+  	  Ability to encrypt text messages and attached files	& N/A		& no \\
     \end{tabular}
   \end{center}
 \end{table}
-
-talk about each point if needed
-
-summary of the MEGA65/chapter
