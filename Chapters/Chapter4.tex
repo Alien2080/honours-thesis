@@ -4,7 +4,7 @@
 \chapter{MEGA65: A retro-computing project}
 \label{Chapter4}
 
-This chapter describes and outlines the current state of a retro-computing project, the MEGA65, mentioned in chapter \ref{Chapter2}. This chapter first provides a description of the MEGA65 project and it's intended products. Then, a use case study of the MEGA65 is carried out to further describe the products and their intended markets. The use case study is also used to elicit the requirements needed to realise the use cases. This detailed information about the MEGA65 project is then used in the next chapter, chapter \ref{Chapter5}, to evaluate the project against the risk list that was obtained from the case studies in chapter \ref{Chapter3}.
+This chapter describes and outlines the current state of a retro-computing project, the MEGA65, mentioned in chapter \ref{Chapter2}. This chapter first provides a description of the MEGA65 project and it's intended products. Following the description, a use case study of the MEGA65 is conducted to further describe the MEGA65. The use case study is also employed to elicit the requirements needed to realise the use cases. This detailed information about the MEGA65 project is then used in the next chapter, chapter \ref{Chapter5}, to evaluate the project against the risk list that was obtained from the case studies in chapter \ref{Chapter3}.
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
 \section{MEGA65 description}
@@ -15,14 +15,16 @@ The MEGA65 is planned to have two separate form factors: a hand-held game consol
 The MEGAphone is to be developed further at Flinders University, with the original MEGA65 team members as well as involving students from the university. The desktop version is to have its physical development handled by MEGA. Physical development refers to the Printed Circuit Board (PCB) housing the FPGA and other components, the case and keyboard. 
 
 \subsection{MEGA65 team}
-As it is relevant to the risk evaluation undertaken in chapter \ref{Chapter5}, this section will briefly describe the MEGA65 team and funding model. The MEGA65 team is centred around Dr Paul Gardner-Stephen, the inventor and lead contributor to the MEGA65. Dr Paul Gardner-Stephen is a senior lecturer at Flinders University. The MEGA65 project was started as a hobby and the goal of the project is not to generate a profit, as it was in many of the case studies. The project is funded, in part, by the university because the project acts as a conduit for student learning. Many of the other project members are volunteers or students.
+As it is relevant to the risk evaluation undertaken in chapter \ref{Chapter5}, this section will briefly describe the MEGA65 team and funding model. 
+
+The MEGA65 team is centred around Dr Paul Gardner-Stephen, the inventor and lead contributor to the MEGA65. Dr Paul Gardner-Stephen is a senior lecturer at Flinders University. The MEGA65 project was started as a hobby and the goal of the project is not to generate a profit, as it was in many of the case studies. The project is funded, in part, by the university because the project acts as a conduit for student learning. Many of the other project members are volunteers or students.
 
 \subsection{Hardware}
 This section briefly describes the hardware, such as the human interface devices of the MEGAphone and desktop form factor of the MEGA65. 
 
 The desktop form factor is planned on featuring a built-in 3.5 inch floppy disk drive, like the Commodore 65 prototype. The desktop form factor will also feature a full-size keyboard. It will require a monitor to be connected to view its output. It will also have a SD drive.
 
-The MEGAphone is the hand-held game console form factor of the MEGA65. It is planned that the MEGAphone will feature its own screen with internal battery and speakers, allowing for mobile usage. The screen will be a touch screen interface with additional controls provided by a d-pad and 4 buttons. The MEGAphone will also feature two sockets for the connection of a cellular modems and the required support to be able to use them to make phone calls and send text messages. It will also have a SD drive.  
+The MEGAphone is the hand-held game console form factor of the MEGA65. It is planned that the MEGAphone will feature its own screen with internal battery and speakers, allowing for mobile usage. The screen will be a touch screen interface with additional controls provided by a d-pad and 4 buttons. The MEGAphone will also feature two sockets for the connection of cellular modems, and the required support to be able to use the modems to make phone calls and send text messages. It will also have a SD card drive.  
 
 \subsection{Software}
 \label{Software}
@@ -41,25 +43,25 @@ The Freeze menu is a program which allows for a variety of useful features. It c
 \item Change CPU frequency between pre-set values: 1 MHz (C64 speed), 2 MHz (C128 speed), 3.5 MHz (C65 speed), 40 MHz (MEGA65 speed).
 \item Change state of machine such as change register values which store the current amount of lives in a video game. This allows 'freeze cartridge' like 'cheats' to be used.
 \item Setting options to set protected ROM and to enable the cartridge port.
-\item Allow inspection of memory and allows changes to it. Action replay-like freeze cartridges used features like this to modify games. This is functional but missing some features which are listed below.
-\item Audio mixer. It is functional but very basic.
+\item Allow inspection of memory and allows changes to it. Action replay-like freeze cartridges used features like this to modify games.
+\item Audio mixer.
 \end{enumerate}
 
 \textbf{Matrix Mode}\\
 An out-of-band machine state inspection tool which allows the user to inspect the RAM, ROM, and CPU, I/O registers.\\
 
 \textbf{Secure Mode}\\
-Is a special mode to allow the untrusted components of the MEGA65 to be excluded from the current working environment. This includes the cellular modem and SD card among others. Figure \ref{secure_compartment} shows the secure compartment and the untrustworthy components.\\
+Secure mode is a special mode to allow the untrusted components of the MEGA65 to be excluded from the current working environment. This includes the cellular modem and SD card among others. Figure \ref{secure_compartment} shows the secure compartment and the untrustworthy components.\\
 
 \begin{figure} \begin{center}
-\includegraphics[width=.3\linewidth]{pics/secure_compartment} 
+\includegraphics[width=.5\linewidth]{pics/secure_compartment} 
 \end{center} 
 \caption{Secure compartment of the MEGA65. All untrustworthy components are outside of the container.\\}
 \label{secure_compartment}
 \end{figure}
 
-\textbf{Applications}\\
-This section talks about the application that have been made by MEGA65 project members for the MEGA65. The current plan is for both form factors to be able to run the same software and include the same software on release. There should be no problem with taking the SD card from one machine and running it in the other, as an example.\\
+%\textbf{Applications}\\
+%This section talks about the application that have been made by MEGA65 project members for the MEGA65. The current plan is for both form factors to be able to run the same software and include the same software on release. There should be no problem with taking the SD card from one machine and running it in the other, as an example.\\
 
 \textbf{MegaWAT} \\
 MegaWAT is an open-source slide presentation and editing application \cite{RN163}. It features:
@@ -100,7 +102,7 @@ The Educator's goal is to teach computer skills and/or topics to others. They ar
 \begin{figure} \begin{center}
 \includegraphics[width=.6\linewidth]{pics/MEGA65_use_case} 
 \end{center} 
-\caption{MEGA65 Use Cases for the target market\\}
+\caption{MEGA65 use cases\\}
 \label{MEGA65_use_cases}
 \end{figure}
 
