@@ -1,8 +1,10 @@
-main.pdf:	main.tex	Chapters/*.tex *.bib Appendices/*.tex 
-	pdflatex main
+main.pdf:	main.tex	Chapters/*.tex *.bib Appendices/*.tex  Makefile
 	pdflatex main
 	bibtex main
 	pdflatex main
+	bibtex main
+	pdflatex main
+	bibtex main
 	pdflatex main
 
 clean:
