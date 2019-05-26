@@ -10,9 +10,37 @@ This chapter describes and outlines the current state of a retro-computing proje
 \section{MEGA65 description}
 The MEGA65 is a evolution of the Commodore 65, built using FPGA technology at its core, more details are given in section \ref{History of the MEGA65 project}. 
 
-The MEGA65 is planned to have two separate form factors: a hand-held game console with two cellular modem sockets to allow for telephony, called MEGAphone and a desktop form-factor inspired by the look of the Commodore 64. During development of the MEGA65, the MEGA65 team got into discussions with the Museum of Electronic Games and Art (MEGA) and came to an agreement with MEGA that they will handle the physical development of the MEGA65 desktop version. Both form-factors are to have the same FPGA chip and FPGA implementation. This means they are the same computer at the core and can run the same software, in fact both form-factors are intended to ship with the same software, both custom software made specifically for the MEGA65 and 3rd party software. Both form-factors are collectively referred to as the MEGA65. 
+The MEGA65 is planned to have two separate form factors: a hand-held game console with two cellular modem sockets to allow for telephony, called MEGAphone (figure \ref{MEGAphone concept}) and a desktop form-factor inspired by the look of the Commodore 65, figure \ref{MEGA65 desktop}. 
 
-The MEGAphone is to be developed further at Flinders University, with the original MEGA65 team members as well as involving students from the university. The desktop version is to have its physical development handled by MEGA. Physical development refers to the Printed Circuit Board (PCB) housing the FPGA and other components, the case and keyboard. 
+During development of the MEGA65, the MEGA65 team got into discussions with the Museum of Electronic Games and Art (MEGA) and came to an agreement that MEGA will handle the physical development of the MEGA65 desktop version.
+
+Both form-factors are to have the same FPGA chip and FPGA implementation. This means they are the same computer at the core and can run the same software, in fact both form-factors are intended to ship with the same software, both custom software made specifically for the MEGA65 and 3rd party software. Both form-factors are collectively referred to as the MEGA65. 
+
+The MEGAphone is to be developed further at Flinders University, with the original MEGA65 team members as well as involving students from the university. The desktop version is to have its physical development handled by MEGA. Physical development refers to the Printed Circuit Board (PCB) (figure \ref{MEGAphone PCB}) housing the FPGA and other components, the case and keyboard. 
+
+\begin{figure} \begin{center}
+\includegraphics[width=0.5\linewidth]{pics/MEGAphone} 
+\end{center} 
+\caption{MEGAphone PCB revision 1 populated with most of the components. Top picture is the back of the MEGA65, bottom is the front. Pictures taken March 2019}
+\label{MEGAphone PCB}
+\end{figure}
+
+\begin{figure} \begin{center}
+\includegraphics[width=0.5\linewidth]{pics/MEGAphone_concept} 
+\end{center} 
+\caption{MEGAphone design concept. \\
+\textit{\small{Picture courtesy of MEGA65.org}}}
+\label{MEGAphone concept}
+\end{figure}
+
+\begin{figure} \begin{center}
+\includegraphics[width=0.5\linewidth]{pics/MEGA65_desktop} 
+\end{center} 
+\caption{MEGA65 desktop form factor design concept. \\
+\textit{\small{Picture courtesy of MEGA65.org}}}
+\label{MEGA65 desktop}
+\end{figure}
+
 
 \subsection{MEGA65 team}
 As it is relevant to the risk evaluation undertaken in Chapter \ref{Chapter5}, this section will briefly describe the MEGA65 team and funding model. 
@@ -34,7 +62,7 @@ The MEGA65 has had a range of custom software created for it, this section aims 
 Kickstart is the name of the hypervisor. It is unusual because it is also like a BIOS and boot-loader in a modern operating system, as well as a hypervisor. It was custom built for the MEGA65 and fits in 16 KB. On start up, the hypervisor loads the BASIC ROM. The BASIC ROM formed the entire operating system on the Commodore 64. Kickstart also handles kernel operations as such it handles all the freeze operations for the Freeze menu. The hypervisor also contains a few utilities housed within FPGA RAM, these can be run from the hypervisor by holding down the two Shift keys on reboot. One of these utilities is a config menu, which allows changing of certain settings. Another is the FDISK utility which can format a SD into the required MEGA65 format, ready for first use.\\
 
 \textbf{The Freeze Menu}\\
-The Freeze menu is a program which allows for a variety of useful features. It can be entered into from any program by holding down the Restore key for 1/2 a second. When run, the Freeze Menu stops the current process or freezes it, and saves the state of the computer. This allows programs to be saved and swapped with other programs, then swapped back to, resuming from the original point, this feature is common in modern computers but it wasn't available on the C64. The idea was to get some of the same functionality as a 'freeze cartridge', a popular type of device in the Home Computer era. Some of the features available from the Freeze Menu are:
+The Freeze menu is a program which allows for a variety of useful features. It can be entered into from any program by holding down the Restore key for 1/2 a second, the main menu is shown in figure \ref{freeze menu}. When run, the Freeze Menu stops the current process or freezes it, and saves the state of the computer. This allows programs to be saved and swapped with other programs, then swapped back to, resuming from the original point, this feature is common in modern computers but it wasn't available on the C64. The idea was to get some of the same functionality as a 'freeze cartridge', a popular type of device in the Home Computer era. Some of the features available from the Freeze Menu are:
 \begin{enumerate}
 \item Restore and return to program which was running when Freeze Menu was run, by pressing F3.
 \item Task switching.
@@ -47,6 +75,15 @@ The Freeze menu is a program which allows for a variety of useful features. It c
 \item Audio mixer.
 \end{enumerate}
 
+
+\begin{figure} \begin{center}
+\includegraphics[width=0.5\linewidth]{pics/freeze_menu} 
+\end{center} 
+\caption{MEGA65 Freeze Menu main screen. \\
+\textit{\small{Picture courtesy of MEGA65.org}}}
+\label{freeze menu}
+\end{figure}
+
 \textbf{Matrix Mode}\\
 An out-of-band machine state inspection tool which allows the user to inspect the RAM, ROM, and CPU, I/O registers.\\
 
@@ -56,7 +93,7 @@ Secure mode is a special mode to allow the untrusted components of the MEGA65 to
 \begin{figure} \begin{center}
 \includegraphics[width=.5\linewidth]{pics/secure_compartment} 
 \end{center} 
-\caption{Secure compartment of the MEGA65. All untrustworthy components are outside of the container.\\}
+\caption{Secure compartment of the MEGA65. All untrustworthy components are outside of the container.}
 \label{secure_compartment}
 \end{figure}
 
