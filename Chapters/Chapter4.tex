@@ -4,24 +4,24 @@
 \chapter{MEGA65: A retro-computing project}
 \label{Chapter4}
 
-This chapter describes and outlines the current state of a retro-computing project, the MEGA65, mentioned in Chapter \ref{Chapter2}. This chapter first provides a description of the MEGA65 project and it's intended products. Following the description, a use case study of the MEGA65 is conducted to further describe the MEGA65. The use case study is also employed to elicit the requirements needed to realise the use cases. This detailed information about the MEGA65 project is then used in the next chapter, Chapter \ref{Chapter5}, to evaluate the project against the risk list that was obtained from the case studies in Chapter \ref{Chapter3}.
+This chapter describes and outlines the current state of a retro-computing project, the MEGA65, mentioned in Chapter \ref{Chapter2}. This chapter first provides a description of the MEGA65 project and its intended products. Following the description, a use case study of the MEGA65 is conducted to further describe the MEGA65. The use case study is also employed to elicit the requirements needed to realise the use cases. This detailed information about the MEGA65 project is then used in the next chapter, Chapter \ref{Chapter5}, to evaluate the project against the risk list that was obtained from the case-studies in Chapter \ref{Chapter3}.
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
 \section{MEGA65 description}
 The MEGA65 is a evolution of the Commodore 65, built using FPGA technology at its core, more details are given in section \ref{History of the MEGA65 project}. 
 
-The MEGA65 is planned to have two separate form factors: a hand-held game console with two cellular modem sockets to allow for telephony, called MEGAphone (figure \ref{MEGAphone concept}) and a desktop form-factor inspired by the look of the Commodore 65, figure \ref{MEGA65 desktop}. 
+The MEGA65 is planned to have two separate form-factors: a hand-held game console with two cellular modem sockets to allow for telephony, called MEGAphone (figure \ref{MEGAphone concept}) and a desktop form-factor inspired by the look of the Commodore 65, figure \ref{MEGA65 desktop}. 
 
 During development of the MEGA65, the MEGA65 team got into discussions with the Museum of Electronic Games and Art (MEGA) and came to an agreement that MEGA will handle the physical development of the MEGA65 desktop version.
 
-Both form-factors are to have the same FPGA chip and FPGA implementation. This means they are the same computer at the core and can run the same software, in fact both form-factors are intended to ship with the same software, both custom software made specifically for the MEGA65 and 3rd party software. Both form-factors are collectively referred to as the MEGA65. 
+Both form-factors are to have the same FPGA chip and FPGA implementation. This means they are the same computer at the core and can run the same software. Both form-factors are intended to ship with the same software, both custom software made specifically for the MEGA65 and 3rd party software. Both form-factors are collectively referred to as the MEGA65. 
 
-The MEGAphone is to be developed further at Flinders University, with the original MEGA65 team members as well as involving students from the university. The desktop version is to have its physical development handled by MEGA. Physical development refers to the Printed Circuit Board (PCB) (figure \ref{MEGAphone PCB}) housing the FPGA and other components, the case and keyboard. 
+The MEGAphone is to be developed further at Flinders University, with the original MEGA65 team members as well as involving students from the university. The desktop version is to have its physical development handled by MEGA. Physical development refers to the Printed Circuit Board (PCB) (figure \ref{MEGAphone PCB}), the case and the keyboard. 
 
 \begin{figure} \begin{center}
 \includegraphics[width=0.5\linewidth]{pics/MEGAphone} 
 \end{center} 
-\caption{MEGAphone PCB revision 1 populated with most of the components. Top picture is the back of the MEGA65, bottom is the front. Pictures taken March 2019}
+\caption{MEGAphone PCB revision 1 populated with most of the components. Top picture is the back of the MEGAphone, bottom is the front. Pictures taken March 2019}
 \label{MEGAphone PCB}
 \end{figure}
 
@@ -42,17 +42,21 @@ The MEGAphone is to be developed further at Flinders University, with the origin
 \end{figure}
 
 
-\subsection{MEGA65 team}
+\subsection{MEGA65 team, funding and goals}
 As it is relevant to the risk evaluation undertaken in Chapter \ref{Chapter5}, this section will briefly describe the MEGA65 team and funding model. 
 
-The MEGA65 team is centred around Dr Paul Gardner-Stephen, the inventor and lead contributor to the MEGA65. Dr Paul Gardner-Stephen is a senior lecturer at Flinders University. The MEGA65 project was started as a hobby and the goal of the project is not to generate a profit, as it was in many of the case studies. The project is funded, in part, by the university because the project acts as a conduit for student learning. Many of the other project members are volunteers or students.
+The MEGA65 team is centred around Dr. Paul Gardner-Stephen, the inventor and lead contributor to the MEGA65 project. Dr. Paul Gardner-Stephen is a senior lecturer at Flinders University. The MEGA65 project was started as a hobby and the goal of the project is not to generate a profit, as it was in many of the case studies. 
+
+The project is funded, in part, by the university because the project acts as a conduit for student learning. Many of the other project members are volunteers or students.
+
+The MEGA65 project hopes and intends the MEGA65 to be able to function as a secure device and some work has been done to facilitate this.
 
 \subsection{Hardware}
-This section briefly describes the hardware, such as the human interface devices of the MEGAphone and desktop form factor of the MEGA65. 
+This section briefly describes the hardware, such as the human interface devices of the MEGAphone and desktop form-factor of the MEGA65. 
 
-The desktop form factor is planned on featuring a built-in 3.5 inch floppy disk drive, like the Commodore 65 prototype. The desktop form factor will also feature a full-size keyboard. It will require a monitor to be connected to view its output. It will also have a SD drive.
+The desktop form-factor is planned on featuring a built-in 3.5 inch floppy disk drive, like the Commodore 65 prototype. The desktop form factor will also feature a full-size keyboard. It will require a monitor to be connected to view its output. It will also have a SD drive.
 
-The MEGAphone is the hand-held game console form factor of the MEGA65. It is planned that the MEGAphone will feature its own screen with internal battery and speakers, allowing for mobile usage. The screen will be a touch screen interface with additional controls provided by a d-pad and 4 buttons. The MEGAphone will also feature two sockets for the connection of cellular modems, and the required support to be able to use the modems to make phone calls and send text messages. It will also have a SD card slot for bulk storage.  
+It is planned that the MEGAphone will feature its own screen with internal battery and speakers, allowing for mobile usage. The screen will be a touch screen interface with additional controls provided by a d-pad and 4 buttons. The MEGAphone will also feature two sockets for the connection of cellular modems, and the required support to be able to make phone calls and send text messages. It will also have a SD card drive.  
 
 \subsection{Software}
 \label{Software}
@@ -91,9 +95,10 @@ An out-of-band machine state inspection tool which allows the user to inspect th
 Secure mode is a special mode to allow the untrusted components of the MEGA65 to be excluded from the current working environment. This includes the cellular modem and SD card among others. Figure \ref{secure_compartment} shows the secure compartment and the untrustworthy components.\\
 
 \begin{figure} \begin{center}
-\includegraphics[width=.5\linewidth]{pics/secure_compartment} 
+\includegraphics[width=1.1\linewidth]{pics/secure_compartment} 
 \end{center} 
-\caption{Secure compartment of the MEGA65. All untrustworthy components are outside of the container.}
+\caption{Secure compartment of the MEGA65. All untrustworthy components are outside of the container.\\
+\textit{\small{Picture courtesy of Timothy Kirby}}}
 \label{secure_compartment}
 \end{figure}
 
@@ -118,7 +123,7 @@ This application allows phone calls to be made over a cellular modem, which the 
 
 
 \section{Use case study}
-This sections lists and discusses several use cases for the MEGA65, in both its form-factors, the desktop computer and the hand-held console. It is hoped that by studying the way the MEGA65 might possibly be used and extracting the features required to fur fill each use case, that a clear description of the MEGA65 can be formed. The requirements can then be used to help capture the current state of the MEGA65 in terms of its development. This list can then help with decision making regarding the minimum viable product for the MEGA65, but that is outside the scope of this thesis. The use cases were first decided upon by determining some roles or actors from the MEGA65's target market, with help from MEGA65 team members. These actors are described below, as well as a brief look at there likely use cases, as seen in Figure \ref{MEGA65_use_cases}.
+This sections lists and discusses several use cases for the MEGA65, in both its form-factors, the desktop computer and the hand-held console. It is hoped that by studying the way the MEGA65 might possibly be used and extracting the features required to fulfil each use case, that a clear description of the MEGA65 can be formed. The requirements can then be used to help capture the current state of the MEGA65 in terms of its development. This list can then help with decision making regarding the minimum viable product for the MEGA65, but that is outside the scope of this thesis. The use cases were first decided upon by determining some roles or actors from the MEGA65's target market, with help from MEGA65 team members. These actors are described below, as well as a brief look at there likely use cases, as seen in Figure \ref{MEGA65_use_cases}.
 
 \subsection{Actors}
 \textbf{Gamer}\\
@@ -146,6 +151,7 @@ The Educator's goal is to teach computer skills and/or topics to others. They ar
 \subsection{Use case narratives}
 This section describes the use cases in a narrative form. The narrative tries to cover the most likely ways that users will interact with the MEGA65. Where the narrative is for a specific form-factor of the MEGA65 it will be stated, otherwise assume it is for both form-factors. \\
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \textbf{Play Games}\\
 The SD card is physically inserted into the MEGA65 before use, either by the actor or during production. The SD card must contain the games to be played and a version of BASIC which is compatible with the games to be played, e.g. Commodore 64 BASIC is needed to play a Commodore 64 game.
@@ -155,23 +161,24 @@ The actors turns on the MEGA65 and then enters the Freeze Menu once the MEGA65 h
 \textbf{Play Games: Variation}\\
 After playing briefly the actor wants to change the CPU mode to the Commodore 64 speed, so the actor enters the Freeze Menu and then changes the CPU mode to the Commodore 64 speed. The actor then leaves the Freeze Menu, resuming the game at the point where the Freeze Menu was entered earlier. 
 
-The actor wishes to control the game using an external joystick. Actor enters Freeze Menu from the game. Actor physically connects joystick via joystick port. Actor resumes game from Freeze Menu and test joystick, if it works then no more needs to be done, if not, it is most likely that the actor needs to enable the joystick controls from the MEGA65 settings. To do this the actor enters the Freeze Menu and saves the state of the current game being played. Then the actor restarts the MEGA65 and enters the Hypervisor menu and from there the configuration menu and then actor enables the joystick controller option. The actor then leaves the Hypervisor and once the MEGA65 has finished booting, the actor enters the Freeze Menu and loads the saved state of the game they were playing. 
+The actor wishes to control the game using an external joystick. Actor enters Freeze Menu from the game. Actor physically connects joystick via joystick port. Actor resumes game from Freeze Menu and tests joystick, if it works then no more needs to be done, if not, it is most likely that the actor needs to enable the joystick controls from the MEGA65 settings. To do this the actor enters the Freeze Menu and saves the state of the current game being played. Then the actor restarts the MEGA65 and enters the Hypervisor menu and from there the configuration menu and then actor enables the joystick controller option. The actor then leaves the Hypervisor and once the MEGA65 has finished booting, the actor enters the Freeze Menu and loads the saved state of the game they were playing. 
 
 Upon loading the game, the actor notices some strange behaviour in the graphics, they appear to be odd colours and are flashing in a strange way. The actor thinks this is most likely due to the video mode being used is the wrong type for the game. The actor enters the Freeze Menu and changes the display mode from NTSC to PAL and then leaves the Freeze Menu, resuming the game, which now looks as expected.\\
 
 \textbf{Requirements needed to meet narrative}\\
-Physical Hardware
+\textbf{Hardware}
 \begin{enumerate}
 \item SD card slot
 \item SD card
 \item Power switch
-\item Ability to navigate through menus and play games i.e human interface device. For the desktop form factor this would be a full sized keyboard. For the MEGAphone form factor menu interactions, it could be either buttons or a touch screen or both. Playing a game would require the d-pad and at least one button on the MEGAphone.
+\item Ability to navigate through menus and play games i.e human interface device. For the desktop form-factor this would be a full-sized keyboard. For the MEGAphone form-factor menu interactions, it could be either buttons or a touch screen or both. Playing a game would require the d-pad and at least one button on the MEGAphone.
 \item Speaker
 \item Volume controllers
 \item Joystick port
 \end{enumerate}
 
-Software\\
+
+\textbf{Software}
 \begin{enumerate}
 \item SD card controller firmware and/or FPGA components to enable reading from SD card
 \item Relevant version of BASIC 
@@ -190,12 +197,13 @@ Software\\
 \item Video controller capable of doing both NTSC and PAL display modes
 \end{enumerate}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \textbf{Run 8-bit Application}\\
 This use case is practically the same as the Play Games use case except an application is loaded from the SD card not a game. The differences between Play Games use case are: the actor would not want to use a joystick and the application may not need sound. Another difference is the application may be more responsive and faster when the MEGA65 is run at the fastest speed. The MEGAphone would require a keyboard to effectively use most applications.\\
 
 \textbf{Requirements needed to meet narrative}\\
-Physical Hardware
+\textbf{Hardware}
 \begin{enumerate}
 \item SD card slot
 \item SD card
@@ -204,7 +212,8 @@ Physical Hardware
 \item MEGAphone - keyboard port
 \end{enumerate}
 
-Software\\
+
+\textbf{Software}
 \begin{enumerate}
 \item SD card controller firmware and/or FPGA components to enable reading from SD card
 \item Relevant version of BASIC 
@@ -218,22 +227,24 @@ Software\\
 \item Keyboard drivers
 \end{enumerate}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \textbf{Update FPGA bitstream}\\
 This use case is unique in that it needs another computer to perform to modifications to the FPGA components. That process will not be covered here as it doesn't relate to the MEGA65 specifically. This use case will start after the FPGA component has been successfully modified.
 
-The actor connects the MEGA65 to the modern computer which houses the updated bitstream via a USB cable. The actor powers the MEGA65 but does not boot it up. The actor then begins the process of copying the new bitstream from the modern computer onto the MEGA65. Once this is complete, the actor disconnects the USB cable then boots up and uses the MEGA65 with the updated bitstream.
+The actor connects the MEGA65 to the modern computer which houses the updated bitstream via a USB cable. The actor powers the MEGA65 but does not boot it up. The actor then begins the process of copying the new bitstream from the modern computer onto the MEGA65. Once this is complete, the actor disconnects the USB cable then boots up and uses the MEGA65 with the updated bitstream. \\
 
 \textbf{Requirements needed to meet narrative}\\
 The requirements relating to the additional computer required to carry out the FPGA modifications are not listed here.\\
-Physical Hardware
+\textbf{Hardware}
 \begin{enumerate}
 \item FPGA USB connection
 \item Power switch
 \item Ability to navigate through menus and applications i.e human interface device. For the desktop form factor this would be a full sized keyboard. For the MEGAphone form factor menu interactions, it could be either buttons or a touch screen or both.
 \end{enumerate}
 
-Software\\
+
+\textbf{Software}
 \begin{enumerate}
 \item SD card controller firmware and/or FPGA components to enable reading from SD card
 \item Relevant version of BASIC 
@@ -243,6 +254,7 @@ Software\\
 \item Human interface device firmware/drivers created, installed and configured to work with relevant hardware
 \end{enumerate}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \textbf{Make Phone Call}\\
 This use case is only applicable to the MEGAphone form factor, it is assumed there is a 4G cellular modem installed with an active SIM card also installed.
@@ -250,7 +262,7 @@ This use case is only applicable to the MEGAphone form factor, it is assumed the
 The actor turns on the MEGAphone, after booting the actor enters the Freeze Menu and navigates to the SD card disk image viewer. The actor selects and loads the image with the telephony software on it. The actor then leaves the Freeze Menu and runs the telephony software with a BASIC command. Once the telephony software has loaded, the actor selects a phone number from the saved contacts list. MEGAphone begins a call to the given number, the actor can hear the other person on the call and be heard. The actor adjusts the receiving volume to better hear the other caller.\\
 
 \textbf{Requirements needed to meet narrative}\\
-Physical Hardware
+\textbf{Hardware}
 \begin{enumerate}
 \item SD card slot
 \item SD card
@@ -263,7 +275,8 @@ Physical Hardware
 \item Microphone
 \end{enumerate}
 
-Software\\
+
+\textbf{Software}
 \begin{enumerate}
 \item SD card controller firmware and/or FPGA components to enable reading from SD card
 \item Relevant version of BASIC 
@@ -276,6 +289,7 @@ Software\\
 \item Microphone drivers
 \end{enumerate}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \textbf{Securely Communicate}\\
 This use case is closely related to the Make Phone Call use case and it is specific to the MEGAphone form-factor.
@@ -283,7 +297,7 @@ This use case is closely related to the Make Phone Call use case and it is speci
 The actor turns on the MEGAphone and enters the Freeze Menu. From the Freeze Menu the SD image with the telephony software is loaded, then Freeze Menu is left, returning the actor the the BASIC environment. The actor now loads the telephony software from the BASIC environment. The actor has three ways in which they can securely communicate: encrypted phone call, encrypted text message or send an encrypted file via a text message. To achieve any of these the actor uses the telephony software to select the desired communication medium and then selects the option to encrypt the contents. The actor then carries out the phone call or writes and sends the text message. \\
 
 \textbf{Requirements needed to meet narrative}\\
-Physical Hardware
+\textbf{Hardware}
 \begin{enumerate}
 \item SD card slot
 \item SD card
@@ -296,7 +310,8 @@ Physical Hardware
 \item Microphone
 \end{enumerate}
 
-Software\\
+
+\textbf{Software}
 \begin{enumerate}
 \item SD card controller firmware and/or FPGA components to enable reading from SD card
 \item Relevant version of BASIC 
@@ -309,14 +324,15 @@ Software\\
 \item Microphone drivers
 \end{enumerate}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \textbf{Run Program in Secure Environment}\\
 This use case could have many variations but the most important aspects are captured here in a single description, in which the actor wants to type up a new text document then encrypt it, all while being as securer from malicious actors as possible.
 
-The actor turns on the MEGA65, after booting the actor loads their choice of text editing software. The actor then enters "Matrix mode" and requests a secure container to work in, referred to as secure mode in section \ref{Software}. Still within "Matrix mode", the actor inspect the state of the machine for suspicious activity. Leaving "Matrix mode" but still within the secure container, the actor returns to the text editor and types out the document and then encrypts it. The actor leaves secure mode, relinquishing the secure container.
+The actor turns on the MEGA65, after booting the actor loads their choice of text editing software. The actor then enters "Matrix mode" and requests a secure container to work in, referred to as secure mode in section \ref{Software}. Still within "Matrix mode", the actor inspect the state of the machine for suspicious activity. Leaving "Matrix mode" but still within the secure container, the actor returns to the text editor and types out the document and then encrypts it. The actor leaves secure mode, relinquishing the secure container. \\
 
 \textbf{Requirements needed to meet narrative}\\
-Physical Hardware
+\textbf{Hardware}
 \begin{enumerate}
 \item SD card slot
 \item SD card
@@ -325,7 +341,8 @@ Physical Hardware
 \item MEGAphone - keyboard port
 \end{enumerate}
 
-Software\\
+
+\textbf{Software}
 \begin{enumerate}
 \item SD card controller firmware and/or FPGA components to enable reading from SD card
 \item Relevant version of BASIC 
@@ -340,12 +357,13 @@ Software\\
 \item Ability to encrypt a text document
 \end{enumerate}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \textbf{Present Slides}\\
-The actor boots up the MEGA65 and enters the Freeze Menu, then they selec and load the SD image with megaWAT on it. Leaving the Freeze Menu, the actor loads megaWAT from the BASIC environment. The actor returns to the Freeze Menu and changes the CPU speed to the fastest available. An external monitor is connected via the video output port.
+The actor boots up the MEGA65 and enters the Freeze Menu, then they select and load the SD image with MegaWAT on it. Leaving the Freeze Menu, the actor loads MegaWAT from the BASIC environment. The actor returns to the Freeze Menu and changes the CPU speed to the fastest available. An external monitor is connected via the video output port. \\
 
 \textbf{Requirements needed to meet narrative}\\
-Physical Hardware
+\textbf{Hardware}
 \begin{enumerate}
 \item SD card slot
 \item SD card
@@ -355,7 +373,8 @@ Physical Hardware
 \item Video output port
 \end{enumerate}
 
-Software\\
+
+\textbf{Software}
 \begin{enumerate}
 \item SD card controller firmware and/or FPGA components to enable reading from SD card
 \item Relevant version of BASIC 
@@ -368,12 +387,13 @@ Software\\
 \item Keyboard drivers
 \end{enumerate}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \textbf{Write and Run BASIC Code}\\
 The actor turns on the MEGA65, after it boots it enters straight into the BASIC command prompt. The actor uses a keyboard to enter and run BASIC code. \\
 
 \textbf{Requirements needed to meet narrative}\\
-Physical Hardware
+\textbf{Hardware}
 \begin{enumerate}
 \item SD card slot
 \item SD card
@@ -382,7 +402,8 @@ Physical Hardware
 \item MEGAphone - keyboard port
 \end{enumerate}
 
-Software\\
+
+\textbf{Software}
 \begin{enumerate}
 \item SD card controller firmware and/or FPGA components to enable reading from SD card
 \item Relevant version of BASIC 
@@ -395,7 +416,7 @@ Software\\
 \section{State of the MEGA65 as of July 2018}
 This section highlights the state of the MEGA65's development at the beginning of this thesis project. This is useful to help illustrate the MEGA65 project as a whole as well as to indicate its current state of completeness. This was achieved by using the requirements gathered from the use case study above and then eliciting the state of the MEGA65 from the MEGA65 team. Table \ref{tab:table1} shows the requirements and whether they were able to be met as of July 2018. A brief discussion of some of the Table \ref{tab:table1} entries follows. 
 
-The desktop form factor is practically complete with a working keyboard which is used to navigate through the menus. The MEGAphone is still in development and the touch screen and buttons are not yet working. The MEGAphone can be controlled via an external keyboard.
+The desktop form-factor is practically complete with a working keyboard which is used to navigate through the menus. The MEGAphone is still in development and the touch screen and buttons are not yet working. The MEGAphone can be controlled via an external keyboard.
 
 The MEGAphone doesn't have speakers attached but the supporting circuitry and components are present. The volume control thumb knobs are also not attached. 
 
